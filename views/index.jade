@@ -2,4 +2,32 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+
+  p(contenteditable, id='description-text').
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  form(method='post', action='/edit_content' id='content-form')
+    label(for='content') content
+      input(type='hidden',
+            placeholder='Content',
+            id='content',
+            name='content'
+            data-for-content='#description-text')
+      input(type='submit', value='Send')
+
+  script.
+    var form = document.getElementById('content-form');
+
+    function sendContent(e) {
+      var edited_content = document.querySelector('p[contenteditable]').innerHTML;
+      document.getElementById('content').value = edited_content;
+      e.preventDefault();
+      this.submit();
+    }
+
+    form.addEventListener("submit", sendContent, false);
