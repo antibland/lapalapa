@@ -15,11 +15,22 @@ var app = express();
 
 mongoose.connect('mongodb://localhost/test');
 
+var Schema = mongoose.Schema;
+
+var ContentSchema = new Schema({
+    content : String,
+    dom_key : String
+});
+
+mongoose.model('Document', ContentSchema);
+
+var Content = mongoose.model('Document');
+
 app.get('/people', function (req, res) {
-    Person.find(function (err, doc) {
-        res.send (doc);
-    })
-})
+  Person.find(function (err, doc) {
+    res.send (doc);
+  })
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -33,7 +44,6 @@ app.use(cors({
     ]
 }));
 
-
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -43,9 +53,24 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 
-app.post('/edit_content', function(req, res) {
-  var content = req.body.content;
-  console.log("Content received: ", content);
+app.post('/', function(req, res) {
+  var request_body = req.body,
+      item,
+      upsert_data;
+
+  for (var key in request_body) {
+    if (request_body.hasOwnProperty(key)) {
+
+      item = new Content({
+        _id: false,
+        content: request_body[key],
+        dom_key: key
+      });
+
+      upsert_data = item.toObject();
+      Content.update({dom_key: item.dom_key}, upsert_data, {upsert: true}, function(err) {});
+    }
+  }
 });
 
 // catch 404 and forward to error handler
@@ -54,7 +79,6 @@ app.use(function(req, res, next) {
   err.status = 404;
   next(err);
 });
-
 
 // error handlers
 

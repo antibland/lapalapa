@@ -11,21 +11,42 @@ block content
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-  form(method='post', action='/edit_content' id='content-form')
-    label(for='content') content
-      input(type='hidden',
-            placeholder='Content',
-            id='content',
-            name='content'
-            data-for-content='#description-text')
+  p(contenteditable, id='more-description-text').
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  p(contenteditable, id='footer').
+    Footer content &copy;2015
+
+  form(method='post', action='/' id='content-form')
       input(type='submit', value='Send')
 
   script.
     var form = document.getElementById('content-form');
 
+    function makeHiddenField(id) {
+      var hidden_el = document.createElement("input");
+      hidden_el.type = "hidden";
+      hidden_el.id = id;
+      hidden_el.name = id;
+      form.appendChild(hidden_el);
+    }
+
     function sendContent(e) {
-      var edited_content = document.querySelector('p[contenteditable]').innerHTML;
-      document.getElementById('content').value = edited_content;
+      var editable_els     = document.querySelectorAll("[contenteditable]"),
+          editable_content;
+
+      [].forEach.call(editable_els, function(el) {
+        var target_id = '#' + el.getAttribute("id");
+
+        makeHiddenField(target_id);
+        document.getElementById(target_id).value = el.innerHTML;
+      });
+
       e.preventDefault();
       this.submit();
     }
