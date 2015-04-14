@@ -26,12 +26,6 @@ mongoose.model('Document', ContentSchema);
 
 var Content = mongoose.model('Document');
 
-app.get('/people', function (req, res) {
-  Person.find(function (err, doc) {
-    res.send (doc);
-  })
-});
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -39,9 +33,9 @@ app.set('view engine', 'jade');
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(cors({
-    allowedOrigins: [
-        'github.com', 'google.com'
-    ]
+  allowedOrigins: [
+    'github.com', 'google.com'
+  ]
 }));
 
 app.use(logger('dev'));
