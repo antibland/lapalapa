@@ -7,3 +7,11 @@ router.get('/', function(req, res, next) {
 });
 
 module.exports = router;
+
+/*  Content.find(function(err, docs) {
+      if (err) {
+        res.send(500);
+        return;
+      }
+      res.render('index', {docs: docs});
+  });*/
