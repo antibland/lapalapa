@@ -21,9 +21,15 @@ var ContentSchema = new Schema({
     dom_key : String
 });
 
-mongoose.model('Document', ContentSchema);
+var Content = mongoose.model('Document', ContentSchema);
 
-var Content = mongoose.model('Document');
+function refreshResults() {
+  var results = Content.find(function(err, docs) {
+    app.set('editable_obj', docs)
+  });
+}
+
+refreshResults();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -63,6 +69,8 @@ app.post('/', function(req, res) {
       Content.update({dom_key: item.dom_key}, upsert_data, {upsert: true}, function(err) {});
     }
   }
+
+  refreshResults();
 });
 
 // catch 404 and forward to error handler
