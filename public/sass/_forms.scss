@@ -1,0 +1,44 @@
+form {
+  $args: (
+    background-color: lighten(lightgray, 10%),
+    max-width: 22em
+  );
+  @include form($args);
+}
+
+label {
+  @include form-label;
+}
+
+[type=checkbox] {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+[type=checkbox],
+[type=text],
+[type=email],
+[type=password] {
+  outline: none;
+
+  &:focus {
+    border: 1px solid $input-focus-color;
+  }
+}
+
+[type=text],
+[type=email],
+[type=password] {
+  border-radius: $border-radius;
+  border: 1px solid lightgray;
+  display: block;
+  width: 100%;
+  padding: 0.5em 0.75em;
+  font-size: 1rem;
+  position: relative;
+  top: -2px;
+
+  @include input-placeholder {
+    color: lighten(lightgray, 5%);
+  }
+}

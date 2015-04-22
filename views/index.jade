@@ -7,8 +7,6 @@ block content
 
   p(contenteditable, id='more-description-text')
 
-  p(contenteditable, id='footer')
-
   form(method='post', action='/' id='content-form')
       input(type='submit', value='Send')
 
@@ -47,7 +45,7 @@ block content
         if (editable_obj.hasOwnProperty(key)) {
           editable_region = document.querySelector(editable_obj[key].dom_key);
 
-          if (typeof editable_region !== "undefined") {
+          if (editable_region) {
             editable_region.innerHTML = editable_obj[key].content;
           }
         }

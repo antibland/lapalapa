@@ -1,0 +1,32 @@
+main {
+  transform: scale(0.95, 0.95);
+  opacity: 0;
+
+  [aria-busy=false] & {
+    transition: 0.3s;
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+header {
+  .icon {
+    margin: rhythm(1) auto 0;
+    text-align: center;
+    display: block;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+#fork-me {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  z-index: 100;
+
+  .menu-open & {
+    display: none;
+  }
+}

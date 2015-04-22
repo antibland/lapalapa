@@ -1,0 +1,26 @@
+// color palette: http://paletton.com/#uid=33z0u0koUBKeLO-kfHCuPyqxmpr
+
+$border-radius: 5px;
+$darkgray: #333;
+$green: #78DFB8;
+$blue: #094983;
+$orange: #ff7639;
+$antique-white: #FAEBD7;
+$input-focus-color: gray;
+
+$mobile-nav-size: 200px;
+$toggle-icon-width: 26px;
+$toggle-icon-height: 26px;
+
+// map defaults
+
+$form_defaults: (
+  background-color: white,
+  max-height: 23em,
+  max-width: 18.5em
+);
+
+$section_header_defaults: (
+  background-color: $orange,
+  color: $darkgray
+);

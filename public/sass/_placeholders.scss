@@ -1,0 +1,76 @@
+%links {
+  &:link,
+  &:visited {
+    color: $blue;
+  }
+  &:focus,
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+%hr {
+    margin: rhythm(2) 0;
+    border: 0;
+    height: 1px;
+    @include background-image(
+      linear-gradient(to right,
+                      rgba(0,0,0,0),
+                      rgba(0,0,0,0.55),
+                      rgba(0,0,0,0))
+    );
+}
+
+%video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 35px;
+  height: 0;
+  overflow: hidden;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+%image-container {
+  transition: 0.3s;
+  width: 150%;
+  margin-left: -25%;
+
+  @include respond-to(medium) {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+%hide-text {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+%call-out {
+  transition: 0.3s;
+  text-shadow: 1px 1px 1px lighten($blue, 30%);
+  line-height: rhythm(1.1);
+  margin: 0 auto rhythm(1);
+  font-size: 125%;
+  text-transform: uppercase;
+  font-style: italic;
+  width: 80%;
+  text-align: center;
+
+  @include respond-to(medium) {
+    width: 75%;
+    font-size: 150%;
+  }
+}

@@ -5,7 +5,8 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
 
   res.render('index', {
-    title: 'Submit content',
+    title: 'La Palapa',
+    year: new Date().getFullYear(),
     editable_obj: res.app.settings.editable_obj
   });
 });
