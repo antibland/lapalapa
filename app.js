@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cors = require('express-cors')
 
-var mongoose = require("mongoose");
+var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
 
@@ -50,6 +50,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
+app.use('/about', routes);
+app.use('/menu', routes);
+app.use('/catering', routes);
+app.use('/contact', routes);
+app.use('/friends', routes);
 
 app.post('/', function(req, res) {
   var request_body = req.body,

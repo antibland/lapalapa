@@ -1,0 +1,8 @@
+$nav-list: 'menu', 'catering', 'friends', 'about', 'contact';
+nav {
+  @each $nav-section in $nav-list {
+    .#{$nav-section} .#{$nav-section} .nav-link {
+      font-weight: bold;
+    }
+  }
+}
