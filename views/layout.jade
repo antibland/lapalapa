@@ -13,8 +13,8 @@ html
     include ./includes/header.jade
     include ./includes/nav.jade
     main
+      h2 #{section} page
       block content
   footer
-    p.copy.
-      Copyright @#{year}, #{title}
+    include ./includes/footer.jade
 
