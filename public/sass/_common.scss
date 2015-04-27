@@ -14,9 +14,17 @@ button,
 
 main {
   padding: 0 1em;
-  max-width: 40em;
   margin: 0 auto;
-  height: 100%;
+  flex: 1 0;
+
+  .content {
+    opacity: 0;
+
+    .loaded & {
+      opacity: 1;
+      background: rgba(white, 0.35);
+    }
+  }
 }
 
 h1 {
@@ -74,7 +82,9 @@ button,
 .container {
   overflow: hidden;
   position: relative;
-  will-change: transform, scroll-position;
+  display: flex;
+  flex-flow: row wrap;
+  height: 100%;
 }
 
 .section-header {
@@ -130,6 +140,24 @@ hr {
 // main
 //=================================
 
-body {
+html {
   background: url(../images/bg-tile.jpg) 0 0 repeat;
+}
+
+body {
+  &.index {
+    background: url(../images/intro.jpg) left center fixed no-repeat;
+    background-size: cover;
+  }
+}
+
+header, footer {
+  flex: 0 100%;
+  opacity: 0;
+  height: 0;
+
+  .loaded & {
+    height: auto;
+    opacity: 1;
+  }
 }

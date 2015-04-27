@@ -1,10 +1,10 @@
 footer {
-  padding: 0 1em;
+  padding: 0;
+  margin: 1em 0 1em;
 
   ul, p {
     text-align: center;
     display: block;
-    margin-bottom: 1em;
   }
 
   li {
@@ -19,7 +19,6 @@ footer {
 
   p {
     font-size: 0.8rem;
-    padding-bottom: 3rem;
-    color: red;
+    margin: 0;
   }
 }

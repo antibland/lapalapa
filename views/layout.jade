@@ -8,13 +8,22 @@ html
     meta(name='viewport', content='user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width')
     meta(http-equiv='X-UA-Compatible', content='IE=Edge')
     title= title
+    link(href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet')
     link(rel='stylesheet', href='/dist/main.min.css')
-  body
-    include ./includes/header.jade
-    include ./includes/nav.jade
-    main
-      h2 #{section} page
-      block content
-  footer
-    include ./includes/footer.jade
+  body(class='#{section}')
+    div.container
+      div.steps
+        div.step.one.
+          La Palapa
+        div.step.two.
+          A Mexican Gourmet Restaurant
+
+      include ./includes/header.jade
+      include ./includes/nav.jade
+      main
+        unless section == "index"
+          h2 #{section} page
+        block content
+      footer
+        include ./includes/footer.jade
 

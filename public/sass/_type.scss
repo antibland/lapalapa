@@ -22,7 +22,8 @@ body {
   font-weight: 300;
 }
 
-#{headings()} {
-  font-family: $archer_bold;
+#{headings()},
+.steps {
+  font-family: 'Indie Flower';
 }
 
