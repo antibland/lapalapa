@@ -13,11 +13,13 @@ html
   body(class='#{section}')
     div.container
       div.steps
-        div.step.one.
-          La Palapa
+        div.step.one
+          span.step.three.first La Pa
+          span.step.three.middle l
+          span.step.three.last apa
         div.step.two.
           A Mexican Gourmet Restaurant
-
+        img.step.four(src='/images/palapa.png', width='102', height='83')
       include ./includes/header.jade
       include ./includes/nav.jade
       main

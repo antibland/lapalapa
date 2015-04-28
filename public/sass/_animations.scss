@@ -27,10 +27,27 @@
   }
 }
 
+@include keyframes(intro-step-three-left) {
+  to {
+    left: -0.8em;
+  }
+}
+
+@include keyframes(intro-step-three-right) {
+  to {
+    left: 0.8em;
+  }
+}
+
+@include keyframes(intro-step-four) {
+  to {
+    opacity: 1;
+  }
+}
+
 .steps {
   width: 90%;
   height: 50%;
-  overflow: auto;
   margin: auto;
   position: absolute;
   top: 0;
@@ -44,10 +61,10 @@
   font-size: 3rem;
   line-height: 2.3rem;
   color: white;
-  opacity: 0;
 
   &.one {
-    transform: translateY(-1em);
+    opacity: 0;
+    transform: translateY(-0.8em);
     margin-bottom: 0.8em;
 
     &.go {
@@ -56,9 +73,40 @@
   }
 
   &.two {
-    transform: translateY(1em);
+    opacity: 0;
+    transform: translateY(0.8em);
+
     &.go {
       @include animation("intro-step-two 1s forwards");
+    }
+  }
+
+  &.three {
+    position: relative;
+    left: 0;
+    opacity: 1;
+
+    &.middle.go {
+      @include transition(0.8s);
+      opacity: 0;
+    }
+
+    &.first.go {
+      @include animation("intro-step-three-left 0.8s forwards");
+    }
+    &.last.go {
+      @include animation("intro-step-three-right 0.8s forwards");
+    }
+  }
+
+  &.four {
+    position: absolute;
+    top: -0.2em;
+    left: 44.8%;
+    opacity: 0;
+
+    &.go {
+       @include animation("intro-step-four 0.8s forwards");
     }
   }
 }
