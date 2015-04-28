@@ -101,7 +101,9 @@
 
   &.four {
     position: absolute;
+    top: -3%;
     opacity: 0;
+    transform: translateX(-26%);
 
     &.go {
        @include animation("intro-step-four 0.8s forwards");

@@ -155,7 +155,7 @@
 
   function init() {
     step_one.classList.add("go");
-    matchPosition();
+    //matchPosition();
   }
 
   if (animation_end) {
@@ -175,5 +175,5 @@
   }
 
   document.addEventListener("DOMContentLoaded", init);
-  window.addEventListener("resize", matchPosition);
+  //window.addEventListener("resize", matchPosition);
 })();
