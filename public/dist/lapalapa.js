@@ -8,6 +8,14 @@
   "use strict";
 
   var ret = {
+    supportsLocalStorage: function() {
+      try {
+        return 'localStorage' in window && window.localStorage !== null;
+      } catch (e) {
+        return false;
+      }
+    },
+
     whichAnimationEvent: function() {
       var t,
           el         = document.createElement("fakeelement"),
@@ -143,11 +151,15 @@
       step_four     = document.querySelector(".step.four"),
       animation_end = utilities.whichAnimationEvent();
 
-  function init() {
-    step_one.classList.add("go");
-  }
+  var ret = {
+    init: function() {
+      if (step_one !== null) {
+        step_one.classList.add("go");
+      }
+    }
+  };
 
-  if (animation_end) {
+  if (animation_end && step_one !== null) {
     step_one.addEventListener(animation_end, function() {
       step_two.classList.add("go");
     }, false);
@@ -163,5 +175,5 @@
     }, false);
   }
 
-  document.addEventListener("DOMContentLoaded", init);
+  return ret;
 })();

@@ -4,3 +4,15 @@ footer
   script.
     var local_data = !{JSON.stringify(editable_obj)}
   script(src='/dist/lapalapa.min.js')
+  script.
+    if (utilities.supportsLocalStorage()) {
+      try {
+        if (localStorage.getItem("first_load") === null) {
+          intro.init();
+          localStorage.setItem("first_load", true);
+        } else {
+          document.querySelector(".steps").setAttribute("aria-hidden", "true");
+          document.querySelector("body").classList.add("loaded");
+        }
+      } catch(e) {}
+    }

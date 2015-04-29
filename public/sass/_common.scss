@@ -23,6 +23,7 @@ main {
     .loaded & {
       opacity: 1;
       background: rgba(white, 0.35);
+      padding: 1em;
     }
   }
 }
@@ -85,6 +86,10 @@ button,
   display: flex;
   flex-flow: row wrap;
   height: 100%;
+
+  .loaded & {
+    height: auto;
+  }
 }
 
 .section-header {

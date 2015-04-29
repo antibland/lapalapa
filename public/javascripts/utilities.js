@@ -2,6 +2,14 @@ var utilities = (function() {
   "use strict";
 
   var ret = {
+    supportsLocalStorage: function() {
+      try {
+        return 'localStorage' in window && window.localStorage !== null;
+      } catch (e) {
+        return false;
+      }
+    },
+
     whichAnimationEvent: function() {
       var t,
           el         = document.createElement("fakeelement"),
