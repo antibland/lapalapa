@@ -16,15 +16,10 @@ main {
   padding: 0 1em;
   margin: 0 auto;
   flex: 1 0;
+  opacity: 1;
 
-  .content {
+  .show_intro & {
     opacity: 0;
-
-    .loaded & {
-      opacity: 1;
-      background: rgba(white, 0.35);
-      padding: 1em;
-    }
   }
 }
 
@@ -81,14 +76,14 @@ button,
 }
 
 .container {
-  overflow: hidden;
   position: relative;
   display: flex;
   flex-flow: row wrap;
-  height: 100%;
+  height: auto;
 
-  .loaded & {
-    height: auto;
+  .show_intro & {
+    overflow: hidden;
+    height: 100%;
   }
 }
 
@@ -151,18 +146,22 @@ html {
 
 body {
   &.index {
-    background: url(../images/intro5.jpg) center center fixed no-repeat;
-    background-size: cover;
+    background: rgba(255,255,255,0);
+
+    &.show_intro {
+      background: url(../images/intro5.jpg) center center fixed no-repeat;
+      background-size: cover;
+    }
   }
 }
 
 header, footer {
   flex: 0 100%;
-  opacity: 0;
-  height: 0;
+  height: auto;
+  opacity: 1;
 
-  .loaded & {
-    height: auto;
-    opacity: 1;
+  .show_intro & {
+    opacity: 0;
+    height: 0;
   }
 }

@@ -153,6 +153,8 @@
 
   var ret = {
     init: function() {
+      document.querySelector("body").classList.add("show_intro");
+
       if (step_one !== null) {
         step_one.classList.add("go");
       }

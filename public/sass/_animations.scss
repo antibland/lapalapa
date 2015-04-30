@@ -55,6 +55,10 @@
   bottom: 0;
   right: 0;
   text-align: center;
+
+  &[aria-hidden=true] {
+    display: none;
+  }
 }
 
 .step {
