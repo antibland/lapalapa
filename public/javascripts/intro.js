@@ -12,6 +12,12 @@ var intro = (function() {
       if (step_one !== null) {
         step_one.classList.add("go");
       }
+    },
+    dismiss: function() {
+      setTimeout(function() {
+        document.querySelector(".steps").setAttribute("aria-hidden", "true");
+        document.querySelector("body").classList.remove("show_intro");
+      }, 1000);
     }
   };
 
@@ -28,6 +34,10 @@ var intro = (function() {
 
     step_three[0].addEventListener(animation_end, function() {
       step_four.classList.add("go");
+    }, false);
+
+    step_four.addEventListener(animation_end, function() {
+      intro.dismiss();
     }, false);
   }
 

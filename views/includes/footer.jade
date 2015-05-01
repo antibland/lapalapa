@@ -11,7 +11,7 @@ footer
           intro.init();
           localStorage.setItem("first_load", true);
         } else {
-          document.querySelector(".steps").setAttribute("aria-hidden", "true");
+          intro.dismiss();
         }
       } catch(e) {}
     }
