@@ -14,7 +14,7 @@ router.get('/', function(req, res, next) {
 router.get('/about', function(req, res, next) {
   res.render('about', {
     section: 'about',
-    title: 'La Palapa',
+    title: 'About Us',
     year: new Date().getFullYear(),
     editable_obj: res.app.settings.editable_obj
   });
@@ -23,7 +23,7 @@ router.get('/about', function(req, res, next) {
 router.get('/menu', function(req, res, next) {
   res.render('menu', {
     section: 'menu',
-    title: 'La Palapa',
+    title: 'Our Menu',
     year: new Date().getFullYear(),
     editable_obj: res.app.settings.editable_obj
   });
@@ -32,7 +32,7 @@ router.get('/menu', function(req, res, next) {
 router.get('/friends', function(req, res, next) {
   res.render('friends', {
     section: 'friends',
-    title: 'La Palapa',
+    title: 'Friends',
     year: new Date().getFullYear(),
     editable_obj: res.app.settings.editable_obj
   });
@@ -41,7 +41,7 @@ router.get('/friends', function(req, res, next) {
 router.get('/catering', function(req, res, next) {
   res.render('catering', {
     section: 'catering',
-    title: 'La Palapa',
+    title: 'Catering',
     year: new Date().getFullYear(),
     editable_obj: res.app.settings.editable_obj
   });
@@ -50,7 +50,7 @@ router.get('/catering', function(req, res, next) {
 router.get('/contact', function(req, res, next) {
   res.render('contact', {
     section: 'contact',
-    title: 'La Palapa',
+    title: 'Contact Us',
     year: new Date().getFullYear(),
     editable_obj: res.app.settings.editable_obj
   });
