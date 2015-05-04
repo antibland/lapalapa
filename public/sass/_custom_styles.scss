@@ -24,3 +24,13 @@ header {
     margin-left: -25%;
   }
 }
+
+[contenteditable] {
+  border: 1px dashed transparent;
+  transition: 0.3s border;
+  outline: none;
+
+  &:empty {
+    border: 1px dashed $mole;
+  }
+}
