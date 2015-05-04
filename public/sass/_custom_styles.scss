@@ -1,3 +1,26 @@
 h2 {
   text-transform: lowercase;
 }
+
+header {
+  h1 {
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  a {
+    background: url(../images/weblogo_2.png) 0 0 no-repeat;
+    background-size: 110px 43px;
+    display: inline-block;
+    text-indent: -9999px;
+    position: relative;
+    top: 0.3em;
+  }
+}
+
+.img-container {
+  @media #{$mobile-media} {
+    width: 135%;
+    margin-left: -25%;
+  }
+}

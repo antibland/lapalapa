@@ -1,0 +1,27 @@
+.food-menu {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 1em;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+}
+
+.food-menu-list-item {
+  width: 50%;
+  display: inline-block;
+  padding: 1em;
+  vertical-align: top;
+
+  @media #{$tablet-media} {
+    width: auto;
+    display: block;
+    padding: 0;
+  }
+}
+
+dt {
+  font-weight: bold;
+}
+
+dl {
+  margin-bottom: 2em;
+}

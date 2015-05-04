@@ -17,17 +17,53 @@ mongoose.connect('mongodb://localhost/test');
 var Schema = mongoose.Schema;
 
 var ContentSchema = new Schema({
-    content : String,
-    dom_key : String
+  content : String,
+  dom_key : String
+});
+
+var FriendSchema = new Schema({
+  url : String,
+  address: String,
+  phone: String,
+  src: String
+});
+
+var MenuSchema = new Schema({
+  type: String,
+  name: String,
+  description: String
 });
 
 var Content = mongoose.model('Document', ContentSchema);
 
+var Friend = mongoose.model('Friend', FriendSchema);
+
+var Menu = mongoose.model('Menu', MenuSchema);
+
 function refreshResults() {
   var results = Content.find(function(err, docs) {
-    app.set('editable_obj', docs)
+    app.set('editable_obj', docs);
   });
 }
+
+function getFriends() {
+  Friend.find({}, function(err, docs) {
+    if (!err) {
+      app.set('friends_obj', docs);
+    } else { throw err; }
+  });
+}
+
+function getMenu(type) {
+  Menu.find({ type: type }, function(err, docs) {
+    if (!err) {
+      app.set('menu_obj', docs);
+    } else { throw err; }
+  });
+}
+
+app.set('getMenu', getMenu);
+app.set('getFriends', getFriends);
 
 refreshResults();
 
@@ -50,11 +86,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/about', routes);
-app.use('/menu', routes);
-app.use('/catering', routes);
-app.use('/contact', routes);
-app.use('/friends', routes);
 
 app.post('/', function(req, res) {
   var request_body = req.body,
@@ -108,6 +139,5 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
-
 
 module.exports = app;

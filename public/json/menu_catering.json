@@ -1,0 +1,123 @@
+{
+  "type": "catering",
+  "courses": [
+    {
+      "course": "Soups",
+      "items": [
+        {
+          "name": "Crema de Chile (Poblano Pepper Cream Soup)",
+          "description": "Onion and cilantro-based cream soup with poblano pepper strips and corn, traditionally served at celebrations in Puebla, Mexico."
+        },
+        {
+          "name": "Sopa de Tortilla (Tortilla Soup)",
+          "description": "Crispy tortilla strips and a poached egg submerged in garlic, cilantro and oregano-based broth and topped with sour cream!"
+        },
+        {
+          "name": "Sopa de Pescado(Fish Soup)",
+          "description": "Fish soup with tilapia and potatoes prepared with onion, garlic and fresh tomatoes — a special dish originating from the coast of Veracruz."
+        }
+      ]
+    },
+
+    {
+      "course": "Salads",
+      "items": [
+        {
+          "name": "Enslada Palapa (Palapa House Salad)",
+          "description": "Our own salad creation featuring cucumber, beets, onion, tomato, carrots, no pales (cactus), boiled egg and queso fresco."
+        },
+        {
+          "name": "Salpicon de Camaron y Calamar (Tasty Ceviche Variation)",
+          "description": "This famous dish from the Pacific coast includes shrimp and squid mixed with fresh onion, cilantro, tomato, roasted peppers and boiled egg."
+        },
+        {
+          "name": "Ensalada de Atun (Tuna Salad)",
+          "description": "Lettuc, onion, tomato and shredded carrots mixed with tuna fish. Your taste buds will tell you, gracias!"
+        }
+      ]
+
+    },
+
+    {
+      "course": "Appetizers",
+      "items": [
+        {
+          "name": "Tamales",
+          "description": "Warm, corn-based dough wrapped in a cornhusk and steam cooked — meat and vegetarian options available."
+        },
+        {
+          "name": "Guacamole & Chips",
+          "description": "The best guac in the 'burgh! Served with our homemade tortilla chips."
+        },
+        {
+          "name": "Chiles Rellenos (Stuffed Peppers)",
+          "description": "A flavorful dish from Mexico City — banana peppers stuffed with spinach and cheese and topped with green or red sauce."
+        },
+        {
+          "name": "Hongos Rellonos al Ajillo (Stuffed Mushrooms in Garlic Sauce)",
+          "description": "Tasty  mushrooms filled with vegetables and topped with garlic sauce — a perfect vegetarian option."
+        },
+        {
+          "name": "Nachos",
+          "description": "Homemade tortilla chips topped with melted cheese, corn, black beans, sour cream, pico de gallo, and your choice of beef or chicken — perfect for sharing with friends!"
+        },
+        {
+          "name": "Camarones a la Diabla (Devil's Shrimp)",
+          "description": "Shrimp sautéed in guajillo pepper sauce — delicious when combined with our guacamole and chips!"
+        }
+      ]
+    },
+
+    {
+      "course": "Entrees",
+      "items": [
+        {
+          "name": "Fajitas Nayarit",
+          "description": "Your choice of chicken, steak or vegetable fajitas, grilled with peppers and pineapple."
+        },
+        {
+          "name": "Mole con Pollo (Chicken with Mole)",
+          "description": "Chicken with traditional Mexican mole — the perfect blend of spices, chile peppers and chocolate! So good!"
+        },
+        {
+          "name": "Puerco en Salsa verde (Pork in Green Sauce)",
+          "description": "Pork shoulder cooked with potatoes and zucchini in our special tomatillo and poblano pepper sauce."
+        },
+        {
+          "name": "Cochinita Pibil (Pork with Achiote Sauce)",
+          "description": "This pork dish from the Yucatan peninsula of Mexico is marinated in Achiote sauce and cooked slowly in the oven; it comes with red onion, lime and habanero pepper salsa on the side."
+        },
+        {
+          "name": "Cazuela de Pescado (Fish Stew)",
+          "description": "This seafood stew of salmon, tilapia and mussels is cooked in white wine with tomato, garlic and cilantro."
+        },
+        {
+          "name": "Barbacoa",
+          "description": "This beef chuck is carefully marinated, then wrapped in banana leaves and steam-cooked. Provecho!"
+        }
+      ]
+    },
+
+    {
+      "course": "Desserts",
+      "items": [
+        {
+          "name": "Tapioca",
+          "description": "Rice pudding infused with cinnamon — a sweet treat for you!"
+        },
+        {
+          "name": "Flan",
+          "description": "One of our specialties — this custard is made with your choice of coconut or vanilla."
+        },
+        {
+          "name": "Tequila Cake",
+          "description": "Moist, fluffy cake baked with a shot of Tequila for extra flavor. Delicious!"
+        },
+        {
+          "name": "Aguas Frescas",
+          "description": "Refreshing horchata hibiscus, lemonade or seasonal fruit flavors available!"
+        }
+      ]
+    }
+  ]
+}

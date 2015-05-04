@@ -20,7 +20,8 @@ nav {
   }
 
   ul {
-    background: rgba(white, 0.35);
+    background: rgba(white, 0.3);
+    box-shadow: 0 5px 4px -4px #333;
     position: fixed;
 
     @media #{$mobile-media} {

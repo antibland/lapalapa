@@ -39,10 +39,13 @@ router.get('/friends', function(req, res, next) {
 });
 
 router.get('/catering', function(req, res, next) {
+  res.app.settings.getMenu('catering');
+
   res.render('catering', {
     section: 'catering',
     title: 'Catering',
     year: new Date().getFullYear(),
+    menu_obj: res.app.settings.menu_obj,
     editable_obj: res.app.settings.editable_obj
   });
 });

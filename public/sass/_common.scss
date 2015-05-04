@@ -69,13 +69,14 @@ img {
   height: auto;
 
   &.in-content {
+    min-width: 300px;
     max-width: 50%;
     float: left;
     margin: 0 1em 0 0;
 
     @media #{$mobile-media} {
       float: none;
-      margin: 0;
+      margin: 0 0 1em;
       max-width: 100%;
     }
   }
@@ -88,6 +89,7 @@ button,
 }
 
 .container {
+  overflow: hidden;
   position: relative;
   display: flex;
   flex-flow: row wrap;
@@ -109,10 +111,6 @@ button,
 
 .video-container {
   @extend %video-container !optional;
-}
-
-.img-container {
-  @extend %image-container !optional;
 }
 
 a {
