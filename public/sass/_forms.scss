@@ -53,6 +53,11 @@ textarea,
   display: block;
   background: #fafafa url("data:image/png;base64,R0lGODlhDwAUAIABAAAAAP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw==") no-repeat 90% 50%;
 
+  @media #{$tablet-media} {
+    width: auto;
+    background-position: 97% 50%;
+  }
+
   select {
     @include appearance(none);
     padding: 5px 8px;
