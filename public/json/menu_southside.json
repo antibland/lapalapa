@@ -1,0 +1,164 @@
+{
+  "type": "southside",
+  "courses": [
+    {
+      "course": "Sopas (Soups)",
+      "items": [
+        {
+          "name": "Sopa de tortilla",
+          "options": ["V", "GF"],
+          "description": "Onion and cilantro-based cream soup with poblano pepper strips and corn, traditionally served at celebrations in Puebla, Mexico.",
+          "price": "$4.95"
+        },
+        {
+          "name": "Frijoles charros",
+          "description": "Pinto beans cooked with bacon, sausage, tomato, cilantro and spices – a favorite of every Mexican family!",
+          "price": "$5.50"
+        },
+        {
+          "name": "Sopa de pescado",
+          "description": "Fish soup with tilapia and potatoes, prepared with onion, garlic and fresh tomatoes - a special dish originating from the coast of Veracruz.",
+          "price": "$5.95"
+        },
+        {
+          "name": "Sopa de verdura",
+          "options": ["V", "GF"],
+          "description": "Our delicious home made vegetable soup.",
+          "price": "$4.95"
+        }
+      ]
+    },
+
+    {
+      "course": "Ensaladas (Salads)",
+      "items": [
+        {
+          "name": "Ensalada Palapa",
+          "description": "Our own salad creation with cucumber, beets, onion, tomato, carrots, nopales (cactus), boiled egg and queso fresco.",
+          "price": "$9.50"
+        },
+        {
+          "name": "Ensalada de la huerta",
+          "description": "Garden salad mixed with fresh lettuce, onion, roasted peppers, tomatoes and carrots – light and refreshing!",
+          "price": "$8.95"
+        },
+        {
+          "name": "Ensalada de Palmitos",
+          "description": "Palm hearts, pinto beans, beets, cilantro, onion and tomato, as fresh as sitting underneath a palm three.",
+          "price": "$10.95"
+        },
+        {
+          "name": "Ensalada de atún",
+          "description": "Lettuce, onion, tomato and shredded carrots mixed with tuna fish. Your taste buds will tell you gracias!",
+          "price": "$8.95"
+        }
+      ]
+
+    },
+
+    {
+      "course": "Aperitivos (Appetizers)",
+      "items": [
+        {
+          "name": "Tamales",
+          "options": ["V", "GF"],
+          "description": "Warm, corn-based dough wrapped in a cornhusk and steam cooked — meat and vegetarian options available.",
+          "price": "$4.95"
+        },
+        {
+          "name": "Mejillones Borrachos",
+          "description": "Mussels sautéed with garlic, tomato, potatoes, cilantro and East End brewery beer or if you prefer in garlic sauce.",
+          "price": "$9.95"
+        },
+        {
+          "name": "Salpicón de camarón y calamar",
+          "description": "This famous dish from the Pacific coast includes boiled shrimp and squid mixed with fresh onion, cilantro, tomato, roasted peppers and boiled egg.",
+          "price": "$10.95"
+        },
+        {
+          "name": "Chiles rellenos con queso y espinaca",
+          "options": ["V", "GF"],
+          "description": "A flavorful Mexico City classic – banana peppers stuffed with spinach and cheese and topped with green or red sauce.",
+          "price": "$7.50"
+        },
+        {
+          "name": "Four Cheese Dip and chips",
+          "description": "Delicious mix of cheddar jack, mozzarella, cotija and queso fresco served with our homemade tortilla chips.",
+          "price": "$4.95"
+        },
+        {
+          "name": "Chips & salsa",
+          "description": "Choose between pico de gallo or green salsa with tortilla chips.       (Both salsas for $5.50)",
+          "price": "$3.50"
+        },
+        {
+          "name": "Guacamole & chips",
+          "description": "The best guac in the ‘burgh! Served with our homemade tortilla chips.",
+          "price": "$5.95"
+        },
+        {
+          "name": "Nachos with",
+          "options": ["Chicken $7.95", "Ground Beef $8.95", "Chicken and Beef $10.95"],
+          "description": "Homemade tortilla chips topped with melted cheese, corn, sour cream, pico de gallo, cheese dip, and your choice of meat… Perfect for sharing with friends!"
+        },
+        {
+          "name": "Empanada",
+          "description": "Wheat flour dough filled with chicken, ground beef, shrimp or veggies… Provecho!",
+          "price": "$4.95"
+        }
+      ]
+    },
+
+    {
+      "course": "Entrees",
+      "items": [
+        {
+          "name": "Fajitas Nayarit",
+          "description": "Your choice of chicken, steak or vegetable fajitas, grilled with peppers and pineapple."
+        },
+        {
+          "name": "Mole con Pollo (Chicken with Mole)",
+          "description": "Chicken with traditional Mexican mole — the perfect blend of spices, chile peppers and chocolate! So good!"
+        },
+        {
+          "name": "Puerco en Salsa verde (Pork in Green Sauce)",
+          "description": "Pork shoulder cooked with potatoes and zucchini in our special tomatillo and poblano pepper sauce."
+        },
+        {
+          "name": "Cochinita Pibil (Pork with Achiote Sauce)",
+          "description": "This pork dish from the Yucatan peninsula of Mexico is marinated in Achiote sauce and cooked slowly in the oven; it comes with red onion, lime and habanero pepper salsa on the side."
+        },
+        {
+          "name": "Cazuela de Pescado (Fish Stew)",
+          "description": "This seafood stew of salmon, tilapia and mussels is cooked in white wine with tomato, garlic and cilantro."
+        },
+        {
+          "name": "Barbacoa",
+          "description": "This beef chuck is carefully marinated, then wrapped in banana leaves and steam-cooked. Provecho!"
+        }
+      ]
+    },
+
+    {
+      "course": "Desserts",
+      "items": [
+        {
+          "name": "Tapioca",
+          "description": "Rice pudding infused with cinnamon — a sweet treat for you!"
+        },
+        {
+          "name": "Flan",
+          "description": "One of our specialties — this custard is made with your choice of coconut or vanilla."
+        },
+        {
+          "name": "Tequila Cake",
+          "description": "Moist, fluffy cake baked with a shot of Tequila for extra flavor. Delicious!"
+        },
+        {
+          "name": "Aguas Frescas",
+          "description": "Refreshing horchata hibiscus, lemonade or seasonal fruit flavors available!"
+        }
+      ]
+    }
+  ]
+}
