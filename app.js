@@ -28,17 +28,9 @@ var FriendSchema = new Schema({
   src: String
 });
 
-var MenuSchema = new Schema({
-  type: String,
-  name: String,
-  description: String
-});
-
 var Content = mongoose.model('Document', ContentSchema);
 
 var Friend = mongoose.model('Friend', FriendSchema);
-
-var Menu = mongoose.model('Menu', MenuSchema);
 
 function refreshResults() {
   var results = Content.find(function(err, docs) {
@@ -54,15 +46,6 @@ function getFriends() {
   });
 }
 
-function getMenu(type) {
-  Menu.find({ type: type }, function(err, docs) {
-    if (!err) {
-      app.set('menu_obj', docs);
-    } else { throw err; }
-  });
-}
-
-app.set('getMenu', getMenu);
 app.set('getFriends', getFriends);
 
 refreshResults();

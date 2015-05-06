@@ -1,3 +1,4 @@
+var Menu = require('../models/menus/catering');
 var express = require('express');
 var router = express.Router();
 
@@ -39,14 +40,18 @@ router.get('/friends', function(req, res, next) {
 });
 
 router.get('/catering', function(req, res, next) {
-  res.app.settings.getMenu('catering');
+  Menu.find({ type: 'catering' }, function(err, docs) {
+    if (!err) {
 
-  res.render('catering', {
-    section: 'catering',
-    title: 'Catering',
-    year: new Date().getFullYear(),
-    menu_obj: res.app.settings.menu_obj,
-    editable_obj: res.app.settings.editable_obj
+      res.render('catering', {
+        section: 'catering',
+        title: 'Catering',
+        menu_obj: docs,
+        year: new Date().getFullYear(),
+        editable_obj: res.app.settings.editable_obj
+      });
+
+    } else { throw err; }
   });
 });
 
