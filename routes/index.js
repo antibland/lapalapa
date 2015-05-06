@@ -1,4 +1,3 @@
-var Menu = require('../models/menus/catering');
 var express = require('express');
 var router = express.Router();
 
@@ -40,6 +39,8 @@ router.get('/friends', function(req, res, next) {
 });
 
 router.get('/catering', function(req, res, next) {
+  var Menu = require('../models/menus/catering');
+
   Menu.find({ type: 'catering' }, function(err, docs) {
     if (!err) {
 

@@ -2,6 +2,25 @@ var utilities = (function() {
   "use strict";
 
   var ret = {
+    loadMap: function(id, lat, lng, title) {
+      var mapDiv = document.getElementById(id),
+          latlng = new google.maps.LatLng(lat, lng),
+          mapOptions = {
+            zoom: 16,
+            center: latlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+          },
+          marker;
+
+      var map = new google.maps.Map(mapDiv, mapOptions);
+
+      marker = new google.maps.Marker({
+          position: latlng,
+          map: map,
+          title: title
+      });
+    },
+
     supportsLocalStorage: function() {
       try {
         return 'localStorage' in window && window.localStorage !== null;
