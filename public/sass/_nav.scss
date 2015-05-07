@@ -20,9 +20,11 @@ nav {
   }
 
   ul {
-    background: rgba(white, 0.3);
     box-shadow: 0 5px 4px -4px #333;
+    border-radius: 0 0 0.5em 0;
+    background: rgba(white, 0.3);
     position: fixed;
+    overflow: hidden;
 
     @media #{$mobile-media} {
       position: static;

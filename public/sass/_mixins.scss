@@ -295,3 +295,8 @@
 @mixin transitions-off {
   transition: none !important;
 }
+
+@mixin rounded-bottom-shadow {
+  box-shadow: 0 5px 4px -4px #333;
+  border-radius: 0 0 0.5em 0.5em;
+}

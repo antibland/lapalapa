@@ -1,7 +1,7 @@
 .food-menu {
+  @include rounded-bottom-shadow;
   background: rgba(255, 255, 255, 0.7);
   padding: 1em;
-  border-radius: 0.5em;
   margin-bottom: 1em;
 }
 
