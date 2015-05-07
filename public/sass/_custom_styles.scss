@@ -1,5 +1,11 @@
 h2 {
   text-transform: lowercase;
+
+  .index & {
+    @media #{$mobile-media} {
+      text-align: center;
+    }
+  }
 }
 
 header {
@@ -99,7 +105,7 @@ header {
   }
 
   h4 {
-    border-bottom: 1px dashed gray;
+    @include dashed-bottom-border;
   }
 
   dl {
