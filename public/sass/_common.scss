@@ -26,10 +26,10 @@ main {
 blockquote {
   @include transition(0.3s);
   @include rounded-bottom-shadow;
-  padding: 1em 2em 1em 3.5em;
+  padding: 1.5em 2em 1em 3.5em;
   line-height: 1.4em;
   background: rgba(255, 255, 255, 0.7);
-  margin: 0 1em 1em;
+  margin: 0 1em 2em;
   background-image: url(../images/openquote.gif);
   background-position: 1% 5%;
   background-repeat: no-repeat;
@@ -38,7 +38,7 @@ blockquote {
   @media #{$mobile-media} {
     background-image: none;
     padding: 1em;
-    margin: 0 0 1em;
+    margin: 0 0 2em;
   }
 
   cite {
