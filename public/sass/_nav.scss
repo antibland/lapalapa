@@ -3,6 +3,7 @@ nav {
   @each $nav-section in $nav-list {
     .#{$nav-section} .#{$nav-section} .nav-link {
       background-color: rgba($mole, 0.6);
+      color: white;
     }
   }
 
@@ -38,7 +39,8 @@ nav {
   }
 
   .nav-link {
-    text-shadow: 0 2px 1px rgba($mole, 0.6);
+    //text-shadow: 0 2px 1px rgba($mole, 0.6);
+    color: rgba($mole, 0.6);
     font-size: 1.05rem;
     display: block;
     cursor: pointer;

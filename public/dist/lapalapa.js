@@ -14,7 +14,8 @@
           mapOptions = {
             zoom: 16,
             center: latlng,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            scrollwheel: false
           },
           marker;
 
