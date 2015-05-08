@@ -138,6 +138,10 @@ header {
     @media #{$tablet-media} {
       font-size: 1.25rem;
     }
+
+    @media #{$mobile-media} {
+      font-size: 1.7em;
+    }
   }
 
   ul {
