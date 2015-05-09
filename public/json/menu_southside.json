@@ -111,52 +111,152 @@
 
     {
       "course": "Entrees",
+      "course_description": "All entrees are served with rice and pinto beans or vegetables.",
       "items": [
         {
-          "name": "Fajitas Nayarit",
-          "description": "Your choice of chicken, steak or vegetable fajitas, grilled with peppers and pineapple."
-        },
-        {
           "name": "Mole con Pollo (Chicken with Mole)",
-          "description": "Chicken with traditional Mexican mole — the perfect blend of spices, chile peppers and chocolate! So good!"
+          "description": "Chicken with traditional Mexican mole — the perfect blend of spices, chile peppers and chocolate! So good!",
+          "price": "$11.95"
         },
         {
-          "name": "Puerco en Salsa verde (Pork in Green Sauce)",
-          "description": "Pork shoulder cooked with potatoes and zucchini in our special tomatillo and poblano pepper sauce."
-        },
-        {
-          "name": "Cochinita Pibil (Pork with Achiote Sauce)",
-          "description": "This pork dish from the Yucatan peninsula of Mexico is marinated in Achiote sauce and cooked slowly in the oven; it comes with red onion, lime and habanero pepper salsa on the side."
-        },
-        {
-          "name": "Cazuela de Pescado (Fish Stew)",
-          "description": "This seafood stew of salmon, tilapia and mussels is cooked in white wine with tomato, garlic and cilantro."
+          "name": "Lengua en salsa verde",
+          "description": "Beef tongue slowly cooked in a poblano pepper and tomatillo sauce.",
+          "price": "$11.95"
         },
         {
           "name": "Barbacoa",
-          "description": "This beef chuck is carefully marinated, then wrapped in banana leaves and steam-cooked. Provecho!"
+          "description": "This beef chuck is carefully marinated, then wrapped in banana leaves and steam-cooked. Provecho!",
+          "price": "$11.95"
+        },
+        {
+          "name": "Flautas de pollo, barbacoa o papa",
+          "options": ["V"],
+          "description": "Your choice of chicken, barbacoa or potatoes wrapped in a crispy tortilla and topped with lettuce, tomato, queso fresco and sour cream. Dish includes 4 flautas.",
+          "price": "$10.95"
+        },
+        {
+          "name": "Cazuela del mar",
+          "description": "This seafood stew features salmon, tilapia and mussels cooked in white wine with tomato, garlic, and cilantro.",
+          "price": "$14.50"
+        },
+        {
+          "name": "Chuletas de puerco en salsa verde ó al ajillo",
+          "description": "Delicious pork chops prepared with our famous green salsa or garlic sauce.",
+          "price": "$11.95"
+        },
+        {
+          "name": "Tilapia a la Veracruzana",
+          "description": "Slow-cooked tilapia covered with a special sauce of tomato, onion, capers and green olives.",
+          "price": "$12.95"
+        },
+        {
+          "name": "Fajitas Nayarit: Vegetarian or Chicken",
+          "options": ["Vegetarian or Chicken $10.95", "Steak $11.95", "Shrimp $13.95"],
+          "description": "Grilled fajitas mixed with peppers, mushrooms and pineapple... Yum!"
+        },
+        {
+          "name": "Enchiladas verdes o rojas",
+          "description": "Three enchiladas with your choice of chicken, beef, mushroom or cheese, wrapped in a corn tortilla and topped with green or red sauce, sour cream and queso fresco.  The combination will make your mouth water!",
+          "price": "$10.95"
+        },
+        {
+          "name": "Enchiladas Norteñas",
+          "description": "Three chicken, mushroom or cheese enchiladas with red sauce and 6 oz. steak on the side… An appetizing treatfor you!",
+          "price": "$13.95"
+        },
+        {
+          "name": "Burrito Steelers",
+          "description": "Ground beef and chicken, rice, pinto beans, spinach, pico de gallo, sour cream, cheese and spicy sauce wrapped in a flour tortilla. Every bite packed with flavor!",
+          "price": "$10.95"
+        },
+        {
+          "name": "Charola para dos!",
+          "description": "Can’t decide what you want? Try our sampler! Includes one tamal, one quesadilla, one flauta, one pork rib, chicken with mole and one empanada. Just the thing to share with a friend!",
+          "price": "$26.95"
         }
       ]
     },
 
     {
-      "course": "Desserts",
+      "course": "CHURRASCO a la Mexicana!",
+      "course_description": "The meat just falls off the bone! Served with rice and roasted potato, veggies or sweet potato french fries.",
       "items": [
         {
-          "name": "Tapioca",
-          "description": "Rice pudding infused with cinnamon — a sweet treat for you!"
+          "name": "Porter House Steak",
+          "description": "Locally raised 14oz Porter House cooked to order.",
+          "price": "$23.95"
         },
         {
-          "name": "Flan",
-          "description": "One of our specialties — this custard is made with your choice of coconut or vanilla."
+          "name": "Pollo asado",
+          "description": "Juicy 1/2 chicken marinated with wine and roasted.",
+          "price": "$11.95"
         },
         {
-          "name": "Tequila Cake",
-          "description": "Moist, fluffy cake baked with a shot of Tequila for extra flavor. Delicious!"
+          "name": "Costilla de Puerco",
+          "description": "Tender and juicy pork ribs seasoned with wine, roasted and topped with mole sauce.",
+          "price": "$12.95"
         },
         {
-          "name": "Aguas Frescas",
-          "description": "Refreshing horchata hibiscus, lemonade or seasonal fruit flavors available!"
+          "name": "Costilla de Res",
+          "description": "Four short ribs seasoned with wine and grilled.",
+          "price": "$13.95"
+        },
+        {
+          "name": "Chorizo Español",
+          "description": "Grilled Spanish Chorizo.",
+          "price": "$10.95"
+        },
+        {
+          "name": "Combo",
+          "description": "Juicy Pork ribs with chicken leg and thigh.",
+          "price": "$15.95"
+        },
+        {
+          "name": "Parrillada para dos",
+          "description": "Four pork ribs, four short ribs, 4 oz. of grilled Spanish chorizo and chicken leg and thigh.",
+          "price": "$27.95"
+        }
+      ]
+    },
+
+    {
+      "course": "Kids Menu",
+      "items": [
+        {
+          "name": "Quesadilla",
+          "description": "Cheese or chicken and cheese quesadilla – Kids love them!",
+          "price": "$3.50"
+        },
+        {
+          "name": "Grilled Cheese",
+          "description": "Classic mozzarella and provolone grilled cheese sandwich!",
+          "price": "$4.50"
+        },
+        {
+          "name": "Hamburger",
+          "description": "Ground beef pattie with tomato and lettuce on a hamburger bun.",
+          "price": "$5.50"
+        }
+      ]
+    },
+
+    {
+      "course": "Postres (Desserts)",
+      "items": [
+        {
+          "name": "Flan de Coco",
+          "description": "One of our specialties — this custard is made with your choice of coconut or vanilla.",
+          "price": "$4.95"
+        },
+        {
+          "name": "Sopapilla",
+          "description": "Crisp flour tortilla covered with sugar and cinnamon with vanilla, chocolate or strawberry ice cream.",
+          "price": "$4.50"
+        },
+        {
+          "name": "Banana Palapa",
+          "description": "Grilled banana with vanilla, chocolate or strawberry ice cream.",
+          "price": "$4.95"
         }
       ]
     }

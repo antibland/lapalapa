@@ -16,12 +16,33 @@
     display: block;
     padding: 0;
   }
+
+  dt {
+    font-weight: bold;
+    position: relative;
+    padding-right: 3em;
+    margin-bottom: 0.25em;
+  }
+
+  dd {
+    margin-bottom: 1em;
+  }
+
+  dl {
+    margin-bottom: 2em;
+  }
+
+  .options > span {
+    font-weight: bold;
+    margin-left: 1em;
+  }
 }
 
-dt {
-  font-weight: bold;
+.food-menu-price {
+  position: absolute;
+  right: 0;
+  top: 1px;
+  font-size: 0.9rem;
+  font-weight: normal;
 }
 
-dl {
-  margin-bottom: 2em;
-}

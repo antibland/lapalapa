@@ -21,11 +21,20 @@ router.get('/about', function(req, res, next) {
 });
 
 router.get('/menu', function(req, res, next) {
-  res.render('menu', {
-    section: 'menu',
-    title: 'Our Menu',
-    year: new Date().getFullYear(),
-    editable_obj: res.app.settings.editable_obj
+  var Menu = require('../models/menus/menu');
+
+  Menu.find({ type: 'southside' }, function(err, docs) {
+    if (!err) {
+
+      res.render('menu', {
+        section: 'menu',
+        title: 'Our Menu',
+        menu_obj: docs,
+        year: new Date().getFullYear(),
+        editable_obj: res.app.settings.editable_obj
+      });
+
+    } else { throw err; }
   });
 });
 
@@ -39,10 +48,11 @@ router.get('/friends', function(req, res, next) {
 });
 
 router.get('/catering', function(req, res, next) {
-  var Menu = require('../models/menus/catering');
+  var Menu = require('../models/menus/menu');
 
   Menu.find({ type: 'catering' }, function(err, docs) {
     if (!err) {
+      console.log(docs);
 
       res.render('catering', {
         section: 'catering',
