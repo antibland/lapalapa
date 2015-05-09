@@ -1,0 +1,50 @@
+#friends-header {
+  text-align: center;
+}
+
+.friends-content {
+  @include transparent-white-bg;
+  @include rounded-bottom-shadow;
+  padding: 1em;
+}
+
+.wrap-row-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1em;
+
+  @media #{$tablet-media} {
+    margin-bottom: 0;
+  }
+
+  .flex-item {
+    width: 50%;
+    text-align: center;
+
+    @media #{$tablet-media} {
+      width: 100%;
+      margin-bottom: 2em;
+    }
+
+    span {
+      display: block;
+      font-family: helvetica;
+      font-size: 0.9rem;
+
+      &.title > a {
+        font-weight: bold;
+      }
+    }
+  }
+
+  img {
+    max-height: 130px;
+  }
+
+  .linked-thumb {
+    > a {
+      border: none;
+    }
+
+  }
+}

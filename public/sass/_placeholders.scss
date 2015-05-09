@@ -1,7 +1,9 @@
 %links {
   &:link,
   &:visited {
-    color: white;
+    color: $green;
+    text-decoration: none;
+    border-bottom: 1px dashed $green;
   }
   &:focus,
   &:hover,

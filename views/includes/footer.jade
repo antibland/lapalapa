@@ -1,17 +1,16 @@
-footer
-  p.copy.
-    Copyright @#{year}
-  script.
-    var local_data = !{JSON.stringify(editable_obj)}
-  script(src='/dist/lapalapa.min.js')
-  script.
-    if (utilities.supportsLocalStorage()) {
-      try {
-        if (localStorage.getItem("first_load") === null) {
-          intro.init();
-          localStorage.setItem("first_load", true);
-        } else {
-          intro.dismiss();
-        }
-      } catch(e) {}
-    }
+p.copy.
+  @#{year} La Palapa
+script.
+  var local_data = !{JSON.stringify(editable_obj)}
+script(src='/dist/lapalapa.min.js')
+script.
+  if (utilities.supportsLocalStorage()) {
+    try {
+      if (localStorage.getItem("first_load") === null) {
+        intro.init();
+        localStorage.setItem("first_load", true);
+      } else {
+        intro.dismiss();
+      }
+    } catch(e) {}
+  }
