@@ -155,6 +155,10 @@ header {
     flex: 1;
     padding: 0 0.5em;
   }
+
+  img {
+    @include rounded-bottom-shadow;
+  }
 }
 
 .intro {
