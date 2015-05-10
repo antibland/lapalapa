@@ -35,6 +35,22 @@
   .options > span {
     font-weight: bold;
     margin-left: 1em;
+
+    &.special {
+      background: $green;
+      color: white;
+      position: relative;
+      top: -1px;
+      border-radius: 50%;
+      display: inline-block;
+      width: 2.2em;
+      font-size: 0.5rem;
+      text-align: center;
+      height: 1.1rem;
+      vertical-align: middle;
+      line-height: 1.1rem;
+      box-shadow: 1px 2px 2px rgba(black, 0.4);
+    }
   }
 }
 

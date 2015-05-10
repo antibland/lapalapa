@@ -8,13 +8,27 @@ script.
 
   function printOptions(options) {
     if (typeof options !== "undefined") {
-      var i   = 0,
-          len = options.length,
+      var i           = 0,
+          len         = options.length,
+          option_type = "",
+          option,
+          label,
           html;
 
       html = '<span class="options">';
       for (; i < len; i++) {
-        html+= '<span>' + options[i] + '</span>';
+        option = options[i];
+
+        if (option === "V" || option === "GF") {
+          option_type = ' class="special"';
+
+          if (option === "V") {
+            label = ' aria-label="Vegetarian option" title="Vegetarian option"';
+          } else if (option === "GF") {
+            label = ' aria-label="Gluten-free option" title="Gluten-free option"';
+          }
+        }
+        html+= '<span' + option_type + label + '>' + option + '</span>';
       }
       html+= '</span>';
 
