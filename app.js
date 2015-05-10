@@ -5,8 +5,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cors = require('express-cors')
-
 var mongoose = require('mongoose');
+var nodemailer = require('nodemailer');
 
 var routes = require('./routes/index');
 
@@ -69,6 +69,36 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
+
+app.post('/contact', function(req, res) {
+
+  // create reusable transporter object using SMTP transport
+  var transporter = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+      user: 'antibland@gmail.com',
+      pass: 'application specific password'
+    }
+  });
+
+  var mailOptions = {
+    from: req.body.name + '<' + req.body.email + '>', // sender address
+    to: 'antibland@gmail.com',
+    subject: req.body.subject + ' Message From Website',
+    text: req.body.message
+  };
+
+  // send mail with defined transport object
+  transporter.sendMail(mailOptions, function(error, info) {
+    if (error) {
+      res.render('contact', { title: 'Something went wrong', msg: 'Something went wrong. Please try again.', err: true, section: 'contact' });
+    }
+    //Yay!! Email sent
+    else {
+      res.render('contact', { title: 'Message sent', msg: 'Message sent! Thank you.', err: false, section: 'contact' });
+    }
+  });
+});
 
 app.post('/', function(req, res) {
   var request_body = req.body,

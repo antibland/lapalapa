@@ -1,9 +1,18 @@
 extends layout
 
 block content
+
+  if(typeof msg !== 'undefined')
+    if(!!err)
+      div(class='msgbox err')
+        p= msg
+    else
+      div(class='msgbox success')
+        p= msg
+
   div(class='box half', role='region')
     h3(id='contact-form-title') Contact Us
-    form(action='/', method='post', aria-labelledby='contact-form-title')
+    form(action='/contact', method='post', aria-labelledby='contact-form-title')
       label(data-required='true', for='name') Name
       input(autocorrect="off",
             autocapitalize="off",
@@ -26,8 +35,8 @@ block content
         select(id="subject",
                name="subject",
                required='required')
-          option(value='general') General
-          option(value='catering') Catering
+          option(value='General') General
+          option(value='Catering') Catering
       label(data-required='true', for='message') Message
       textarea(id="message",
                name="message",
