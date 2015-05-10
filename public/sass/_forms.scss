@@ -60,13 +60,14 @@ textarea,
 
   select {
     @include appearance(none);
-    padding: 5px 8px;
+    padding: 2px 8px;
     width: 130%;
     border: none;
     box-shadow: none;
     background: transparent;
     background-image: none;
     line-height: 3em;
+    font-size: 0.7rem;
   }
 }
 
