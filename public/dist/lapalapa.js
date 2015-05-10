@@ -8,6 +8,13 @@
   "use strict";
 
   var ret = {
+    getParameterByName: function(name) {
+      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+      var regex   = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+          results = regex.exec(location.search);
+
+      return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    },
     loadMap: function(id, lat, lng, title) {
       var mapDiv = document.getElementById(id),
           latlng = new google.maps.LatLng(lat, lng),

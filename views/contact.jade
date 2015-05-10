@@ -8,6 +8,7 @@ block content
       input(autocorrect="off",
             autocapitalize="off",
             type="text",
+            autofocus="autofocus",
             id="name",
             name="name",
             required='required',
@@ -73,3 +74,12 @@ block content
 
   include ./includes/maps/south-side.jade
   include ./includes/maps/public-market.jade
+
+  script.
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var subject = utilities.getParameterByName('subject');
+
+      if (subject.length) {
+        document.getElementById('subject').value = subject;
+      }
+    });
