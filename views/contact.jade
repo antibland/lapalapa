@@ -46,30 +46,7 @@ block content
         input(type='submit', value='Send', class='button')
 
   div(class='box half', role='region')
-    h3(id='location-hours') Hours
-    ul(id='location-hours-list')
-      li
-        h4 South Side
-        dl
-          dt Monday
-          dd Closed
-          dt Tuesday — Thursday
-          dd 11am to 9pm
-          dt Friday & Saturday
-          dd 11am to 11pm
-          dt Sunday
-          dd 11am to 9pm
-      li
-        h4 Public Market
-        dl
-          dt Monday & Tuesday
-          dd Closed
-          dt Wednesday — Friday
-          dd 10am to 4pm
-          dt Saturday
-          dd 9am to 5pm
-          dt Sunday
-          dd 10am to 4pm
+    include ./includes/hours
 
   div(class='box', role='region')
     h3(id='map-south-side-header') South Side Location

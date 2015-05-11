@@ -1,0 +1,109 @@
+header {
+  .logo,
+  .phone {
+    text-align: center;
+  }
+
+  h1 {
+    margin-bottom: 0.3em;
+  }
+
+  .phone {
+    margin-bottom: 1em;
+    font-size: 0.95rem;
+    font-style: italic;
+  }
+
+  .logo {
+    background: url(../images/logo.png) 50% 0 no-repeat;
+    background-size: contain;
+    display: inline-block;
+    color: transparent !important;
+    position: relative;
+    top: 0.3em;
+  }
+
+  .hours-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    .toggle-hours {
+      padding: 0.4em 1em;
+      display: inline-block;
+      font-size: 0.9rem;
+      text-shadow: 0 2px 1px rgba(black, 0.6);
+      cursor: pointer;
+    }
+
+    #hours {
+      background: rgba($mole, 0.6);
+      color: white;
+
+      &:target {
+        &+ .content {
+          max-height: 30em;
+
+          .toggle-hours {
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    p {
+      margin: 0;
+    }
+
+    li {
+      float: left;
+      width: 50%;
+    }
+
+    .content {
+      transition: 0.3s ease-in-out;
+      max-height: 0;
+      overflow: hidden;
+      position: absolute;
+      right: 0;
+      width: 550%;
+      z-index: 1;
+      background: rgba(white, 0.95);
+
+      @media #{$mobile-media} {
+        width: 320px;
+      }
+
+      ul {
+        display: inline-block;
+        padding: 1em 1em 0.5em;
+        width: 100%;
+      }
+
+      h4 {
+        font-size: 1.2rem;
+        border-bottom: 1px dashed $mole;
+      }
+
+      dt {
+        font-weight: bold;
+      }
+
+      dt, dd {
+        font-size: 0.75rem;
+      }
+
+      .toggle-hours {
+        text-indent: -9999px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 4.5em;
+        height: 3em;
+        border: none;
+        z-index: 10;
+        display: none;
+      }
+    }
+  }
+}
