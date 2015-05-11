@@ -52,8 +52,6 @@ router.get('/catering', function(req, res, next) {
 
   Menu.find({ type: 'catering' }, function(err, docs) {
     if (!err) {
-      console.log(docs);
-
       res.render('catering', {
         section: 'catering',
         title: 'Catering',
