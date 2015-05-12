@@ -5,7 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 //var cors = require('express-cors');
-var config = require('./config');
+var config = require('./config.js');
 var mongoose = require('mongoose');
 var nodemailer = require('nodemailer');
 
