@@ -1,6 +1,7 @@
 .contact {
   form {
     @include rounded-bottom-shadow;
+    @include transparent-white-bg;
     width: 95%;
     float: left;
     margin: 0 0 2em 0;

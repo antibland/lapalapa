@@ -3,11 +3,16 @@
 @import "custom_contact_styles";
 
 h2 {
+  transition: 0.3s;
   text-transform: lowercase;
+  margin-bottom: 0.25em;
+  margin-left: 0.3em;
 
   .index & {
     @media #{$mobile-media} {
       text-align: center;
+      margin-left: 0;
+      font-size: 2.7rem;
     }
   }
 }
