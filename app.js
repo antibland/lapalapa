@@ -4,7 +4,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-//var cors = require('express-cors')
+//var cors = require('express-cors');
+var config = require('./config');
 var mongoose = require('mongoose');
 var nodemailer = require('nodemailer');
 
@@ -12,8 +13,8 @@ var routes = require('./routes/index');
 
 var app = express();
 
-//mongoose.connect('mongodb://localhost/test');
-mongoose.connect('mongodb://antibland:boring00@ds031862.mongolab.com:31862/lapalapa')
+app.set('dbUrl', config.db[app.settings.env]);
+mongoose.connect(app.get('dbUrl'));
 
 var Schema = mongoose.Schema;
 
