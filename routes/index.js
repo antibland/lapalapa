@@ -38,15 +38,6 @@ router.get('/menu', function(req, res, next) {
   });
 });
 
-router.get('/friends', function(req, res, next) {
-  res.render('friends', {
-    section: 'friends',
-    title: 'Friends',
-    year: new Date().getFullYear(),
-    editable_obj: res.app.settings.editable_obj
-  });
-});
-
 router.get('/catering', function(req, res, next) {
   var Menu = require('../models/menus/menu');
 

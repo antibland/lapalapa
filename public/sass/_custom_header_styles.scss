@@ -31,11 +31,16 @@ header {
     top: 0;
 
     .toggle-hours {
-      padding: 0.4em 1em;
+      transition: 0.3s;
+      padding: 0.15em 0.75em;
       display: inline-block;
       font-size: 0.9rem;
       text-shadow: 0 2px 1px rgba(black, 0.6);
       cursor: pointer;
+
+      @media #{$mobile-media} {
+        font-size: 0.7rem;
+      }
     }
 
     #hours {
