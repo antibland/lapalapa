@@ -31,12 +31,14 @@ header {
     top: 0;
 
     .toggle-hours {
-      transition: 0.3s;
+      background: rgba($mole, 0.6);
       padding: 0.15em 0.75em;
       display: inline-block;
       font-size: 0.9rem;
       text-shadow: 0 2px 1px rgba(black, 0.6);
       cursor: pointer;
+      color: white;
+      border: none;
 
       @media #{$mobile-media} {
         font-size: 0.7rem;
@@ -44,10 +46,11 @@ header {
     }
 
     #hours {
-      background: rgba($mole, 0.6);
-      color: white;
-
       &:target {
+        opacity: 0;
+        background: transparent;
+        pointer-events: none;
+
         &+ .content {
           max-height: 30em;
 
@@ -101,14 +104,17 @@ header {
       }
 
       .toggle-hours {
-        text-indent: -9999px;
         position: fixed;
         top: 0;
         right: 0;
-        width: 4.5em;
-        height: 3em;
         border: none;
         z-index: 10;
+        text-align: center;
+        width: 3.95em;
+        height: 2.3em;
+        line-height: 2.3em;
+        padding: 0;
+        z-index: 99;
         display: none;
       }
     }

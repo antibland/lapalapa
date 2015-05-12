@@ -154,7 +154,6 @@ header .hours-container .content {
 }
 
 header .hours-container .content .toggle-hours {
-  text-indent: -9999px;
   position: fixed;
   top: 0;
   right: 0;
