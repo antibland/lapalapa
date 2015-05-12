@@ -30,6 +30,7 @@ nav {
 
     @media #{$mobile-media} {
       position: static;
+      border-radius: 0;
     }
   }
 
