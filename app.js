@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var cors = require('express-cors')
+//var cors = require('express-cors')
 var mongoose = require('mongoose');
 var nodemailer = require('nodemailer');
 
@@ -57,11 +57,11 @@ app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
-app.use(cors({
+/*app.use(cors({
   allowedOrigins: [
     'github.com', 'google.com'
   ]
-}));
+}));*/
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
