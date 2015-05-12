@@ -9,18 +9,10 @@ html
     meta(http-equiv='X-UA-Compatible', content='IE=Edge')
     title= title
     link(href='//fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet')
-    link(rel='stylesheet', href='/dist/main.min.css')
+    link(rel='stylesheet', href='/stylesheets/critical_min.css')
     script(src="https://maps.googleapis.com/maps/api/js?v=3&sensor=false")
   body(class='#{section}')
     div.container
-      div.steps
-        div.step.one
-          span.step.three.first La Pa
-          span.step.three.middle l
-          span.step.three.last apa
-        div.step.two.
-          A Mexican Gourmet Kitchen
-        img.step.four(src='/images/palapa.png', width='102', height='83')
       include ./includes/header.jade
       include ./includes/nav.jade
       main

@@ -3,7 +3,6 @@
 @import "custom_contact_styles";
 
 h2 {
-  transition: 0.3s;
   text-transform: lowercase;
   margin-bottom: 0.25em;
   margin-left: 0.3em;
@@ -44,4 +43,10 @@ h2 {
 
 .logo {
   border: none !important;
+}
+
+nav .index .index .nav-link {
+  background-color: rgba(102,46,41,0.6);
+  color: white;
+  text-shadow: 0 2px 1px rgba(0,0,0,0.6);
 }
