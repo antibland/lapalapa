@@ -5,7 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 //var cors = require('express-cors');
-var config = require('./config.js');
+
 var mongoose = require('mongoose');
 var nodemailer = require('nodemailer');
 
@@ -13,7 +13,17 @@ var routes = require('./routes/index');
 
 var app = express();
 
-app.set('dbUrl', config.db[app.settings.env]);
+module.exports = {
+ config: {
+   db: {
+     production: "mongodb://antibland:boring00@ds031862.mongolab.com:31862/lapalapa",
+     development: "mongodb://localhost/test",
+     test: "mongodb://localhost/test"
+   }
+ }
+};
+
+app.set('dbUrl', module.exports.config.db[app.settings.env]);
 mongoose.connect(app.get('dbUrl'));
 
 var Schema = mongoose.Schema;
