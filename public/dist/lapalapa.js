@@ -125,6 +125,7 @@
 
   var ret = {
     init: function() {
+      alert('yes');
       bindings();
     }
   };

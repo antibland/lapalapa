@@ -3,6 +3,7 @@ var main = (function() {
 
   var ret = {
     init: function() {
+      alert('yes');
       bindings();
     }
   };

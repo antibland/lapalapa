@@ -64,10 +64,10 @@ block content
   include ./includes/maps/public-market.jade
 
   script.
-    document.addEventListener("DOMContentLoaded", function(event) {
+    window.onload = function() {
       var subject = utilities.getParameterByName('subject');
 
       if (subject.length) {
         document.getElementById('subject').value = subject;
       }
-    });
+    }
