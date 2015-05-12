@@ -23,8 +23,9 @@ module.exports = {
  }
 };
 
-app.set('dbUrl', module.exports.config.db[app.settings.env]);
-mongoose.connect(app.get('dbUrl'));
+//app.set('dbUrl', module.exports.config.db[app.settings.env]);
+//mongoose.connect(app.get('dbUrl'));
+mongoose.connect('mongodb://antibland:boring00@ds031862.mongolab.com:31862/lapalapa');
 
 var Schema = mongoose.Schema;
 
