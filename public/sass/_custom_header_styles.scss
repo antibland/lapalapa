@@ -47,8 +47,6 @@ header {
 
     #hours {
       &:target {
-        opacity: 0;
-        background: transparent;
         pointer-events: none;
 
         &+ .content {
