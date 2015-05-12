@@ -12,7 +12,8 @@ var routes = require('./routes/index');
 
 var app = express();
 
-mongoose.connect('mongodb://localhost/test');
+//mongoose.connect('mongodb://localhost/test');
+mongoose.connect('mongodb://antibland:boring00@ds031862.mongolab.com:31862/lapalapa')
 
 var Schema = mongoose.Schema;
 
