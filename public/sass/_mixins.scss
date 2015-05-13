@@ -150,6 +150,8 @@
       background-image: none;
     }
   }
+
+  @content;
 }
 
 @mixin mobile-smooth-scroll {
