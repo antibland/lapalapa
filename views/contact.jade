@@ -66,8 +66,7 @@ block content
   script.
     window.onload = function() {
       var subject = utilities.getParameterByName('subject');
-
       if (subject.length) {
-        document.getElementById('subject').value = subject;
+        document.getElementById('subject').value = subject.charAt(0).toUpperCase() + subject.slice(1);
       }
     }
