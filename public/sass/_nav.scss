@@ -12,8 +12,11 @@ nav {
     }
   }
 
-  .nav-link:active {
-    @extend .active-nav;
+  .nav-link {
+    &:active,
+    &.active {
+      @extend .active-nav;
+    }
   }
 
   opacity: 1;

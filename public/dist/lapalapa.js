@@ -130,11 +130,18 @@
   };
 
   function bindings() {
-    document.addEventListener("touchstart", function(){}, true);
+    var nav_links = document.querySelectorAll('.nav-link');
+
+    [].forEach.call(nav_links, function (el) {
+      el.addEventListener('click', function() {
+        el.classList.add('active');
+      }, false);
+    });
+
+    document.addEventListener('touchstart', function(){}, true);
   }
 
   return ret;
-
 })();
 ;var content_editable = (function() {
   var form = document.getElementById('content-form');
