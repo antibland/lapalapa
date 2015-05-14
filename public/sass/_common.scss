@@ -31,7 +31,7 @@ blockquote {
   padding: 1.5em 2em 1em 3.5em;
   line-height: 1.4em;
   margin: 0 1em 2em;
-  background-image: url(../images/openquote.gif);
+  background-image: url(/images/openquote.gif);
   background-position: 1% 5%;
   background-repeat: no-repeat;
   text-indent: 23px;
@@ -177,7 +177,7 @@ hr {
 //=================================
 
 html {
-  @include background-image-retina('../images/bg-tile', png, 400px, 400px);
+  @include background-image-retina('/images/bg-tile', png, 400px, 400px);
   background-repeat: repeat;
 }
 

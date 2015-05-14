@@ -11,15 +11,13 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   box-sizing: border-box;
 }
 
-html{background-image:url("../images/bg-tile.png");background-repeat:repeat}
-  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){html{background-image:url("../images/bg-tile@2x.png");background-size:400px 400px}}
-
-
 ol, ul {
   list-style: none;
 }
+html{background-image:url("/images/bg-tile.png");background-repeat:repeat}
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){html{background-image:url("/images/bg-tile@2x.png");background-size:400px 400px}}
 
-header .logo{width:200px;height:84px;background-image:url("../images/logo.png");display:block;text-indent:-9999px;white-space:nowrap;overflow:hidden;margin:0.3em auto 0}@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){header .logo{background-image:url("../images/logo@2x.png");background-size:200px 84px}}
+header .logo{width:200px;height:84px;background-image:url("/images/logo.png");display:block;text-indent:-9999px;white-space:nowrap;overflow:hidden;margin:0.3em auto 0}@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){header .logo{background-image:url("/images/logo@2x.png");background-size:200px 84px}}
 
 a:link, a:visited {
   color: #1b633a;
@@ -47,7 +45,7 @@ blockquote {
   padding: 1.5em 2em 1em 3.5em;
   line-height: 1.4em;
   margin: 0 1em 2em;
-  background-image: url(../images/openquote.gif);
+  background-image: url(/images/openquote.gif);
   background-position: 1% 5%;
   background-repeat: no-repeat;
   text-indent: 23px;
