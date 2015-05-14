@@ -5,7 +5,7 @@ header {
   }
 
   h1 {
-    margin-bottom: 0.3em;
+    margin-bottom: 0;
   }
 
   .phone {
@@ -17,12 +17,14 @@ header {
   }
 
   .logo {
-    background: url(../images/logo.png) 50% 0 no-repeat;
-    background-size: contain;
-    display: inline-block;
-    color: transparent !important;
-    position: relative;
-    top: 0.3em;
+    width: 200px;
+    height: 84px;
+    @include background-image-retina('../images/logo', png, 200px, 84px);
+    display: block;
+    text-indent: -9999px;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0.3em auto 0;
   }
 
   .hours-container {
