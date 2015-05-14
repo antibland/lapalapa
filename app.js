@@ -1,3 +1,4 @@
+var compression = require('compression');
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -12,6 +13,8 @@ var nodemailer = require('nodemailer');
 var routes = require('./routes/index');
 
 var app = express();
+
+app.use(compression());
 
 module.exports = {
  config: {
