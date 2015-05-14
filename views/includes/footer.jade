@@ -17,3 +17,7 @@ script.
   loadStyleSheet('//fonts.googleapis.com/css?family=Indie+Flower');
   loadStyleSheet('/dist/main.min.css');
 script(src='/dist/lapalapa.min.js', async)
+script.
+  window.onload = function() {
+    main.init();
+  }

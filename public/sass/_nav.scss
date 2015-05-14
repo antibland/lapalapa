@@ -1,11 +1,19 @@
+.active-nav {
+  background-color: rgba($mole, 0.6);
+  color: white;
+  text-shadow: 0 2px 1px rgba(black, 0.6);
+}
+
 $nav-list: 'index', 'menu', 'catering', 'about', 'contact';
 nav {
   @each $nav-section in $nav-list {
     .#{$nav-section} .#{$nav-section} .nav-link {
-      background-color: rgba($mole, 0.6);
-      color: white;
-      text-shadow: 0 2px 1px rgba(black, 0.6);
+      @extend .active-nav;
     }
+  }
+
+  .nav-link:active {
+    @extend .active-nav;
   }
 
   opacity: 1;
