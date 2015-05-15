@@ -61,11 +61,3 @@ block content
 
   include ./includes/maps/south-side.jade
   include ./includes/maps/public-market.jade
-
-  script.
-    window.onload = function() {
-      var subject = utilities.getParameterByName('subject');
-      if (subject.length) {
-        document.getElementById('subject').value = subject.charAt(0).toUpperCase() + subject.slice(1);
-      }
-    }
