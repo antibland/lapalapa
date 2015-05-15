@@ -8,7 +8,8 @@ var main = (function() {
   };
 
   function bindings() {
-    var nav_links = document.querySelectorAll('.nav-link');
+    var nav_links   = document.querySelectorAll('.nav-link'),
+        click_touch = utilities.isTouchDevice() ? 'touchend' : 'click';
 
     function removeActiveNav() {
       [].forEach.call(nav_links, function (el) {
@@ -18,7 +19,7 @@ var main = (function() {
     }
 
     [].forEach.call(nav_links, function (el) {
-      el.addEventListener('click', function(e) {
+      el.addEventListener(click_touch, function(e) {
         var href = this.href;
         e.preventDefault();
         removeActiveNav();
