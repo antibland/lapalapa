@@ -81,7 +81,7 @@
   outline: none;
   display: inline-block;
   background-color: $hue3;
-  border: 1px solid $hue1;
+  border: 1px solid $hue1 !important;
   font-family: "century gothic", sans-serif;
   font-size: $text;
   padding: $padding;
@@ -149,6 +149,11 @@
     &:before {
       background-image: none;
     }
+  }
+
+  &.inline {
+    display: inline;
+    padding: 0.4em 0.8em;
   }
 
   @content;

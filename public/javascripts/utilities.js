@@ -27,7 +27,8 @@ var utilities = (function() {
             zoom: 16,
             center: latlng,
             mapTypeId: google.maps.MapTypeId.ROADMAP,
-            scrollwheel: false
+            scrollwheel: false,
+            disableDefaultUI: true
           },
           marker;
 

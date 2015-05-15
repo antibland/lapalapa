@@ -19,13 +19,12 @@ main {
   opacity: 1;
   max-width: 100%;
 
-  .show_intro & {
-    opacity: 0;
+  @media #{$mobile-media} {
+    padding: 1em;
   }
 }
 
 blockquote {
-  @include transition(0.3s);
   @include rounded-bottom-shadow;
   @include transparent-white-bg;
   padding: 1.5em 2em 1em 3.5em;
@@ -120,11 +119,6 @@ button,
   display: flex;
   flex-flow: row wrap;
   height: auto;
-
-  .show_intro & {
-    overflow: hidden;
-    height: 100%;
-  }
 }
 
 .section-header {
@@ -191,9 +185,4 @@ header, footer {
   flex: 0 100%;
   height: auto;
   opacity: 1;
-
-  .show_intro & {
-    opacity: 0;
-    height: 0;
-  }
 }

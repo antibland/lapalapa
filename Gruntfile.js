@@ -69,7 +69,7 @@ module.exports = function(grunt) {
         tasks: ['jshint', 'concat', 'uglify']
       },
       svg: {
-        files: ['svg/*.svg'],
+        files: ['public/svg/*.svg'],
         tasks: ['svgstore']
       }
     }
