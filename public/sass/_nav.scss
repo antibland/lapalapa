@@ -4,6 +4,22 @@
   text-shadow: 0 2px 1px rgba(black, 0.6);
 }
 
+.default-nav {
+  color: rgba($mole, 0.6);
+  border: none;
+  font-size: 1.05rem;
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0.25em 1.5em;
+}
+
+.inactive-nav {
+  color: rgba($mole, 0.6) !important;
+  text-shadow: none !important;
+  background-color: transparent !important;
+}
+
 $nav-list: 'index', 'menu', 'catering', 'about', 'contact';
 nav {
   @each $nav-section in $nav-list {
@@ -13,9 +29,15 @@ nav {
   }
 
   .nav-link {
+    @extend .default-nav;
+
     &:active,
-    &.active {
+    &.active-nav {
       @extend .active-nav;
+    }
+
+    &.inactive-nav {
+      @extend .inactive-nav;
     }
   }
 
@@ -43,21 +65,5 @@ nav {
       position: static;
       border-radius: 0;
     }
-  }
-
-  .show_intro & {
-    flex: 0 0 0;
-    opacity: 0;
-    padding: 0;
-  }
-
-  .nav-link {
-    color: rgba($mole, 0.6);
-    border: none;
-    font-size: 1.05rem;
-    display: block;
-    cursor: pointer;
-    text-decoration: none;
-    padding: 0.25em 1.5em;
   }
 }
