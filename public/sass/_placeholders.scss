@@ -12,8 +12,9 @@
   }
 
   &[data-type=tel] {
-    &:hover,
-    &:focus {
+    .no-touch & {
+      display: none;
+
       &:before {
         transition: 0.2s;
         content: attr(data-tel);

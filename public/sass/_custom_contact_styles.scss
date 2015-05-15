@@ -26,6 +26,16 @@
   line-height: 2em;
 }
 
+.reservation {
+  img {
+    width: 1em;
+    height: 1em;
+    margin-right: 0.4em;
+    position: relative;
+    top: 2px;
+  }
+}
+
 .map {
   max-width: 54em;
   height: 350px;
