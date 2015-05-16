@@ -96,3 +96,24 @@
   font-weight: normal;
 }
 
+.more-info {
+  margin: 0 1em;
+
+  > p {
+    padding: 0 0 1em 1.7em;
+    margin-bottom: 0;
+    line-height: 1.5em;
+  }
+
+  [class*='icon-'] {
+    background-size: 1.2em 1.2em;
+  }
+}
+
+.icon-wine {
+  background: url(/svg/wine.svg) 0 0 no-repeat;
+}
+
+.icon-farm {
+  background: url(/svg/farm.svg) 0 0 no-repeat;
+}
