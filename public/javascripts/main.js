@@ -9,7 +9,7 @@ var main = (function() {
 
   function bindings() {
     var nav_links   = document.querySelectorAll('.nav-link'),
-        click_touch = utilities.isTouchDevice() ? 'touchend' : 'click';
+        click_touch = utilities.isTouchDevice() ? 'touchstart' : 'click';
 
     function removeActiveNav() {
       [].forEach.call(nav_links, function (el) {
