@@ -61,6 +61,10 @@ nav {
     position: fixed;
     overflow: hidden;
 
+    @media #{$iphone6-landscape} {
+      top: 0;
+    }
+
     @media #{$mobile-media} {
       position: static;
       border-radius: 0;
