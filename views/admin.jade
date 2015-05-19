@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h3(id='admin-form-title', class='center') Log In
+  form(action='/login', method='post', aria-labelledby='admin-form-title')
+    label(data-required='true', for='username') Username
+    input(autocorrect="off",
+          autocapitalize="off",
+          autofocus="autofocus",
+          type="text",
+          id="username",
+          name="username",
+          required='required',
+          placeholder="Username")
+    label(data-required='true', for='password') Password
+    input(autocorrect="off",
+          autocapitalize="off",
+          type="password",
+          id="password",
+          name="password",
+          required='required',
+          placeholder="Password")
+    div.center
+      input(type='submit', value='Submit', class='button')
