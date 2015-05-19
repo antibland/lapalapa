@@ -18,15 +18,11 @@ script.
   loadStyleSheet('/dist/main.min.css');
 script(src='/dist/lapalapa.min.js', async)
 
-if section == 'contact'
-  script.
-    var subject = utilities.getParameterByName('subject');
-
-    if (subject.length) {
-      document.getElementById('subject').value = subject.charAt(0).toUpperCase() + subject.slice(1);
-    }
-
 script.
   window.onload = function() {
     main.init();
-  }
+
+    if (document.getElementsByTagName('body')[0].classList.contains('contact')) {
+      main.contact();
+    }
+  };

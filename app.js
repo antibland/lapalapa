@@ -1,5 +1,6 @@
 var compression = require('compression');
 var express = require('express');
+var session = require('express-session');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -13,6 +14,7 @@ var nodemailer = require('nodemailer');
 var routes = require('./routes/index');
 
 var app = express();
+var _session;
 
 app.use(compression());
 
@@ -37,16 +39,9 @@ var ContentSchema = new Schema({
   dom_key : String
 });
 
-var FriendSchema = new Schema({
-  url : String,
-  address: String,
-  phone: String,
-  src: String
-});
+var allowedUsernames = ['antibland', 'jesusmtzpa']
 
 var Content = mongoose.model('Document', ContentSchema);
-
-var Friend = mongoose.model('Friend', FriendSchema);
 
 function refreshResults() {
   var results = Content.find(function(err, docs) {
@@ -54,15 +49,15 @@ function refreshResults() {
   });
 }
 
-function getFriends() {
-  Friend.find({}, function(err, docs) {
-    if (!err) {
-      app.set('friends_obj', docs);
-    } else { throw err; }
-  });
+function contains(a, obj) {
+  var i = a.length;
+  while (i--) {
+    if (a[i] === obj) {
+      return true;
+    }
+  }
+  return false;
 }
-
-app.set('getFriends', getFriends);
 
 refreshResults();
 
@@ -78,13 +73,59 @@ app.use(cors({
   ]
 }));
 
+app.use(session({
+  secret: 'ssshhhhh',
+  resave: true,
+  saveUninitialized: true
+}));
+
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/',function(req, res, next) {
+  _session=req.session;
+  _session.username;
+  _session.logged_in;
+  next();
+});
+
 app.use('/', routes);
+
+app.get('/admin', function(req, res) {
+  _session=req.session;
+
+  res.render('admin', {
+    section: 'admin',
+    logged_in: _session.logged_in,
+    username: _session.username,
+    editable_obj: res.app.settings.editable_obj
+  });
+});
+
+app.post('/login', function(req, res) {
+  _session = req.session;
+  _session.logged_in = false;
+
+  if (contains(allowedUsernames, req.body.username)) {
+    _session.username = req.body.username;
+    _session.logged_in = true;
+
+    res.render('index', {
+      section: 'index',
+      logged_in: _session.logged_in,
+      username: _session.username
+    });
+  } else {
+    res.render('admin', {
+      section: 'admin',
+      logged_in: _session.logged_in,
+      username: _session.username
+    });
+  }
+});
 
 app.post('/contact', function(req, res) {
 

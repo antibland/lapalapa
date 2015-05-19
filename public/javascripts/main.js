@@ -4,8 +4,19 @@ var main = (function() {
   var ret = {
     init: function() {
       bindings();
+    },
+    contact: function() {
+      fillSelect();
     }
   };
+
+  function fillSelect() {
+    var subject = utilities.getParameterByName('subject');
+
+    if (subject.length) {
+      document.getElementById('subject').value = subject.charAt(0).toUpperCase() + subject.slice(1);
+    }
+  }
 
   function bindings() {
     var nav_links   = document.querySelectorAll('.nav-link'),

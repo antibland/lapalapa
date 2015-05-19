@@ -3,33 +3,34 @@ header
     a(href='/', class='logo') La Palapa
   p.phone &mdash; 412-586-7015 &mdash;
 
-  if section == "contact"
+  if section == 'contact'
     include ../includes/make_reservation.jade
 
-  div.hours-container
-    a(id='hours', class='toggle-hours' href='#hours', aria-label='Show hours') hours
-    div.content
-      a(class='toggle-hours', href='#', aria-label='Hide hours') hours
-      ul(id='header-hours-list')
-        li
-          h4 South Side
-          dl
-            dt Monday
-            dd Closed
-            dt Tuesday — Thursday
-            dd 11am to 9pm
-            dt Friday & Saturday
-            dd 11am to 11pm
-            dt Sunday
-            dd 11am to 9pm
-        li
-          h4 Public Market
-          dl
-            dt Monday & Tuesday
-            dd Closed
-            dt Wednesday — Friday
-            dd 10am to 4pm
-            dt Saturday
-            dd 9am to 5pm
-            dt Sunday
-            dd 10am to 4pm
+  unless section == 'admin'
+    div.hours-container
+      a(id='hours', class='toggle-hours' href='#hours', aria-label='Show hours') hours
+      div.content
+        a(class='toggle-hours', href='#', aria-label='Hide hours') hours
+        ul(id='header-hours-list')
+          li
+            h4 South Side
+            dl
+              dt Monday
+              dd Closed
+              dt Tuesday — Thursday
+              dd 11am to 9pm
+              dt Friday & Saturday
+              dd 11am to 11pm
+              dt Sunday
+              dd 11am to 9pm
+          li
+            h4 Public Market
+            dl
+              dt Monday & Tuesday
+              dd Closed
+              dt Wednesday — Friday
+              dd 10am to 4pm
+              dt Saturday
+              dd 9am to 5pm
+              dt Sunday
+              dd 10am to 4pm
