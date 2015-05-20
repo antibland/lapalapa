@@ -28,20 +28,13 @@ module.exports = {
  }
 };
 
-//app.set('dbUrl', module.exports.config.db[app.settings.env]);
-//mongoose.connect(app.get('dbUrl'));
-mongoose.connect('mongodb://antibland:boring00@ds031862.mongolab.com:31862/lapalapa');
-
-var Schema = mongoose.Schema;
-
-var ContentSchema = new Schema({
-  content : String,
-  dom_key : String
-});
+if (app.get('env') === 'development' || app.get('env') === 'test') {
+  mongoose.connect(module.exports.config.db.development);
+} else if (app.get('env') === 'production') {
+  mongoose.connect(module.exports.config.db.production);
+}
 
 var allowedUsernames = ['antibland', 'jesusmtzpa']
-
-var Content = mongoose.model('Document', ContentSchema);
 
 function contains(a, obj) {
   var i = a.length;
@@ -146,28 +139,6 @@ app.post('/contact', function(req, res) {
       res.render('contact', { title: 'Message sent', msg: 'Message sent! Thank you.', err: false, section: 'contact' });
     }
   });
-});
-
-app.post('/', function(req, res) {
-  var request_body = req.body,
-      item,
-      upsert_data;
-
-  for (var key in request_body) {
-    if (request_body.hasOwnProperty(key)) {
-
-      item = new Content({
-        _id: false,
-        content: request_body[key],
-        dom_key: key
-      });
-
-      upsert_data = item.toObject();
-      Content.update({dom_key: item.dom_key}, upsert_data, {upsert: true}, function(err) {});
-    }
-  }
-
-  refreshResults();
 });
 
 // catch 404 and forward to error handler
