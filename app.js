@@ -21,7 +21,7 @@ app.use(compression());
 module.exports = {
  config: {
    db: {
-     production: process.env.MONGOLAB_URI,
+     production: process.env.PROD_DB,
      development: "mongodb://localhost/test",
      test: "mongodb://localhost/test"
    }
