@@ -30,7 +30,7 @@ module.exports = {
 
 if (app.get('env') === 'development' || app.get('env') === 'test') {
   mongoose.connect(module.exports.config.db.development);
-} else if (app.get('env') === 'production') {
+} else {
   mongoose.connect(module.exports.config.db.production);
 }
 
