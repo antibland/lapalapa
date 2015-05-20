@@ -6,8 +6,7 @@ router.get('/', function(req, res, next) {
   res.render('index', {
     section: 'index',
     title: 'La Palapa',
-    year: new Date().getFullYear(),
-    editable_obj: res.app.settings.editable_obj
+    year: new Date().getFullYear()
   });
 });
 
@@ -15,8 +14,7 @@ router.get('/about', function(req, res, next) {
   res.render('about', {
     section: 'about',
     title: 'About Us',
-    year: new Date().getFullYear(),
-    editable_obj: res.app.settings.editable_obj
+    year: new Date().getFullYear()
   });
 });
 
@@ -30,8 +28,7 @@ router.get('/menu', function(req, res, next) {
         section: 'menu',
         title: 'Our Menu',
         menu_obj: docs,
-        year: new Date().getFullYear(),
-        editable_obj: res.app.settings.editable_obj
+        year: new Date().getFullYear()
       });
 
     } else { throw err; }
@@ -47,8 +44,7 @@ router.get('/catering', function(req, res, next) {
         section: 'catering',
         title: 'Catering',
         menu_obj: docs,
-        year: new Date().getFullYear(),
-        editable_obj: res.app.settings.editable_obj
+        year: new Date().getFullYear()
       });
 
     } else { throw err; }
@@ -59,8 +55,7 @@ router.get('/contact', function(req, res, next) {
   res.render('contact', {
     section: 'contact',
     title: 'Contact Us',
-    year: new Date().getFullYear(),
-    editable_obj: res.app.settings.editable_obj
+    year: new Date().getFullYear()
   });
 });
 

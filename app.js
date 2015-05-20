@@ -43,12 +43,6 @@ var allowedUsernames = ['antibland', 'jesusmtzpa']
 
 var Content = mongoose.model('Document', ContentSchema);
 
-function refreshResults() {
-  var results = Content.find(function(err, docs) {
-    app.set('editable_obj', docs);
-  });
-}
-
 function contains(a, obj) {
   var i = a.length;
   while (i--) {
@@ -58,8 +52,6 @@ function contains(a, obj) {
   }
   return false;
 }
-
-refreshResults();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -101,7 +93,6 @@ app.get('/admin', function(req, res) {
     section: 'admin',
     logged_in: _session.logged_in,
     username: _session.username,
-    editable_obj: res.app.settings.editable_obj
   });
 });
 
