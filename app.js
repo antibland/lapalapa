@@ -21,22 +21,20 @@ app.use(compression());
 module.exports = {
  config: {
    db: {
-     production: "mongodb://antibland:boring00@ds031862.mongolab.com:31862/lapalapa",
+     production: process.env.MONGOLAB_URI,
      development: "mongodb://localhost/test",
      test: "mongodb://localhost/test"
    }
  }
 };
 
-mongoose.connect(module.exports.config.db.production);
-
-/*if (app.get('env') === 'development' || app.get('env') === 'test') {
+if (app.get('env') === 'development' || app.get('env') === 'test') {
   mongoose.connect(module.exports.config.db.development);
 } else {
   mongoose.connect(module.exports.config.db.production);
-}*/
+}
 
-var allowedUsernames = ['antibland', 'jesusmtzpa']
+var allowedUsernames = ['antibland', 'jesusmtzpa'];
 
 function contains(a, obj) {
   var i = a.length;
