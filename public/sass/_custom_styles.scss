@@ -38,7 +38,18 @@ h2 {
   text-shadow: 0 2px 1px rgba(black, 0.6);
   color: white;
   padding: 1em;
-  margin: 0 1em 1em;
+  margin: 0 1em 1.5em;
+  position: relative;
+
+  &:after {
+    content: '';
+    border: 10px solid transparent;
+    border-top: 10px solid rgba($mole, 0.6);
+    position: absolute;
+    left: 50%;
+    margin-left: -10px;
+    bottom: -20px;
+  }
 }
 
 .logo {
