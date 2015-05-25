@@ -59,8 +59,11 @@ nav {
     border-radius: 0 0 0.5em 0;
     background: rgba(white, 0.3);
     position: fixed;
-    top: 20.3%;
     overflow: hidden;
+
+    .contact & {
+      top: 15.3%;
+    }
 
     @media #{$iphone6-landscape} {
       top: 0;
