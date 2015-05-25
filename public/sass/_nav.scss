@@ -59,6 +59,7 @@ nav {
     border-radius: 0 0 0.5em 0;
     background: rgba(white, 0.3);
     position: fixed;
+    top: 20.3%;
     overflow: hidden;
 
     @media #{$iphone6-landscape} {
@@ -68,6 +69,7 @@ nav {
     @media #{$mobile-media} {
       position: static;
       border-radius: 0;
+      top: 0;
     }
   }
 }
