@@ -61,10 +61,6 @@ nav {
     position: fixed;
     overflow: hidden;
 
-    .contact & {
-      top: 15.3%;
-    }
-
     @media #{$iphone6-landscape} {
       top: 0;
     }
@@ -72,7 +68,6 @@ nav {
     @media #{$mobile-media} {
       position: static;
       border-radius: 0;
-      top: 0;
     }
   }
 }
