@@ -33,6 +33,7 @@ header {
     top: 0;
 
     .toggle-hours {
+      @include remove-tap-highlight;
       background: rgba($mole, 0.6);
       display: inline-block;
       font-size: 0.9rem;
