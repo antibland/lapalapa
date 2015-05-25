@@ -56,10 +56,6 @@ header {
         padding: 0;
         z-index: 99;
         line-height: 2.2em;
-
-        @media #{$mobile-media} {
-          line-height: 2.3em;
-        }
       }
 
       @media #{$mobile-media} {
