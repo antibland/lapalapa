@@ -106,14 +106,16 @@
   }
 
   [class*='icon-'] {
-    background-size: 1.2em 1.2em;
+    background-size: 1em 1em;
+    background-repeat: no-repeat;
+    background-position: 0 13%;
   }
 }
 
 .icon-wine {
-  background: url(/svg/wine.svg) 0 0 no-repeat;
+  background-image: url(/svg/wine.svg);
 }
 
 .icon-farm {
-  background: url(/svg/farm.svg) 0 0 no-repeat;
+  background-image: url(/svg/farm.svg);
 }
