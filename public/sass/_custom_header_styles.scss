@@ -34,6 +34,7 @@ header {
 
     .toggle-hours {
       @include remove-tap-highlight;
+      font-weight: normal;
       background: rgba($mole, 0.6);
       display: inline-block;
       font-size: 0.9rem;
