@@ -126,6 +126,7 @@
     display: flex;
     @media #{$mobile-media} {
       flex-direction: column;
+      display: block;
     }
   }
 
