@@ -70,3 +70,51 @@ nav .index .index .nav-link {
     box-shadow: 0 2px 2px rgba(black, 0.4);
   }
 }
+
+.two-col {
+  h3 {
+    @include transition(0.3s font-size);
+    @include ellipsis;
+    text-align: center;
+    white-space: nowrap;
+    width: 100%;
+
+    @media #{$tablet-media} {
+      font-size: 1.25rem;
+    }
+
+    @media #{$mobile-media} {
+      font-size: 1.7em;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    @media #{$mobile-media} {
+      flex-direction: column;
+      display: block;
+    }
+  }
+
+  li {
+    flex: 1 50%;
+    padding: 0 0.5em;
+    max-width: 50%;
+
+    @media #{$mobile-media} {
+      max-width: 100%;
+    }
+  }
+
+  a {
+    border: none;
+  }
+
+  img {
+    @include rounded-bottom-shadow;
+    width: 100%;
+  }
+}

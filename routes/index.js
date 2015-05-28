@@ -18,6 +18,14 @@ router.get('/about', function(req, res, next) {
   });
 });
 
+router.get('/trailer', function(req, res, next) {
+  res.render('trailer', {
+    section: 'trailer',
+    title: 'The trailer',
+    year: new Date().getFullYear()
+  });
+});
+
 router.get('/menu', function(req, res, next) {
   var Menu = require('../models/menus/menu');
 
