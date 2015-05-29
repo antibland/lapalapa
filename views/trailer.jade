@@ -1,5 +1,14 @@
 extends layout
 
 block content
-  p.
-    Trailer
+  p For a quick, delicious lunch, come by our trailer. <strong>Lunch hours are from 11am to 2pm, Tuesday through Friday</strong>.
+
+  p If you'd like to see the trailer at a particular event, we can do that! <a href='/contact?subject=catering'>Send us an email</a>.
+  div(class='box', role='region')
+      h3(id='map-trailer-title') Trailer Location
+        span.address Penn Ave. and 7th street, Downtown Pittsburgh
+      div(id='map-trailer', aria-labelledby='map-trailer-title', class='map')
+
+  script(src="https://maps.googleapis.com/maps/api/js?v=3&sensor=false")
+  include ./includes/maps/trailer.jade
+
