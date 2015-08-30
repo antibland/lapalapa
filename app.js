@@ -115,18 +115,24 @@ app.post('/contact', function(req, res) {
 
   // create reusable transporter object using SMTP transport
   var transporter = nodemailer.createTransport({
-    service: 'Gmail',
+    service: 'zoho',
     auth: {
-      user: 'antibland@gmail.com',
-      pass: 'application specific password'
+      user: 'catering@lapalapapgh.com',
+      pass: process.env.zoho_pw || ""
     }
   });
 
+  var mailObj = {
+    from: 'From: ' + req.body.name + '\n',
+    email: 'Email: ' + req.body.email + '\n',
+    message: '\n\n' + req.body.message
+  }
+
   var mailOptions = {
-    from: req.body.name + '<' + req.body.email + '>', // sender address
-    to: 'antibland@gmail.com',
-    subject: req.body.subject + ' Message From Website',
-    text: req.body.message
+    from: 'catering@lapalapapgh.com', // sender address
+    to: 'catering@lapalapapgh.com',
+    subject: 'Website Inquiry: ' + req.body.subject,
+    text: mailObj.from + mailObj.email + mailObj.message
   };
 
   // send mail with defined transport object
