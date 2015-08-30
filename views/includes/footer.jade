@@ -1,19 +1,5 @@
 p.copy.
   @#{year} La Palapa
-script.
-  function loadStyleSheet(src) {
-    if (document.createStyleSheet) {
-      document.createStyleSheet(src);
-    } else {
-      var stylesheet = document.createElement('link');
-      stylesheet.href = src;
-      stylesheet.rel = 'stylesheet';
-      stylesheet.type = 'text/css';
-      document.getElementsByTagName('head')[0].appendChild(stylesheet);
-    }
-  }
-  loadStyleSheet('//fonts.googleapis.com/css?family=Indie+Flower');
-  loadStyleSheet('/dist/main.min.css');
 script(src='/dist/lapalapa.min.js', async)
 
 script.
