@@ -13,7 +13,7 @@ header {
     font-size: 0.95rem;
     font-style: italic;
     letter-spacing: 1px;
-    text-shadow: 0 2px 1px rgba($green, 0.5);
+    font-weight: 600
   }
 
   .logo {
@@ -36,6 +36,7 @@ header {
       @include remove-tap-highlight;
       font-weight: normal;
       background: rgba($mole, 0.6);
+      padding: 0.15em 0.75em;
       display: inline-block;
       font-size: 0.9rem;
       text-shadow: 0 2px 1px rgba(black, 0.6);
