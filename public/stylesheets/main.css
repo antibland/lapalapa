@@ -1053,23 +1053,24 @@ nav ul {
 }
 /* line 102, ../sass/_menu.scss */
 .more-info > p {
-  padding: 0 0 1em 1.7em;
+  font-size: 0.9em;
+  padding: 0 0 0.6em 1.7em;
   margin-bottom: 0;
   line-height: 1.5em;
 }
-/* line 108, ../sass/_menu.scss */
+/* line 109, ../sass/_menu.scss */
 .more-info [class*='icon-'] {
   background-size: 1em 1em;
   background-repeat: no-repeat;
   background-position: 0 13%;
 }
 
-/* line 115, ../sass/_menu.scss */
+/* line 116, ../sass/_menu.scss */
 .icon-wine {
   background-image: url(/svg/wine.svg);
 }
 
-/* line 119, ../sass/_menu.scss */
+/* line 120, ../sass/_menu.scss */
 .icon-farm {
   background-image: url(/svg/farm.svg);
 }
