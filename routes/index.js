@@ -27,7 +27,22 @@ router.get('/trailer', function(req, res, next) {
 });
 
 router.get('/menu', function(req, res, next) {
-  var Menu = require('../models/menus/menu');
+  var Menu = require('../models/menus/menu'),
+      fs            = require('fs'),
+      file_names    = fs.readdirSync('./public/images/slideshow'),
+      len           = file_names.length,
+      scrubbed_names = [],
+      file_ext,
+      file_name;
+
+  for (var i = 0; i < len; i++) {
+    file_name = file_names[i];
+    file_ext = file_name.split('.')[1].toLowerCase();
+
+    if ((file_ext === 'jpg' || file_ext === 'jpeg') && !~file_name.indexOf('@2x')) {
+      scrubbed_names.push(file_name);
+    }
+  }
 
   Menu.find({ type: 'southside' }, function(err, docs) {
     if (!err) {
@@ -35,6 +50,7 @@ router.get('/menu', function(req, res, next) {
       res.render('menu', {
         section: 'menu',
         title: 'Our Menu',
+        images: scrubbed_names,
         menu_obj: docs,
         year: new Date().getFullYear()
       });

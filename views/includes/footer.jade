@@ -9,4 +9,8 @@ script.
     if (document.getElementsByTagName('body')[0].classList.contains('contact')) {
       main.contact();
     }
+
+    if (document.getElementsByClassName('diy-slideshow').length) {
+      slideshow.init();
+    }
   };

@@ -1,0 +1,10 @@
+div.diy-slideshow
+  each image, index in images
+    if index == 0
+      figure.show
+        img(src='/images/slideshow/#{image}' alt='')
+    else
+      figure
+        img(src='/images/slideshow/#{image}' alt='')
+  span.prev &laquo;
+  span.next &raquo;

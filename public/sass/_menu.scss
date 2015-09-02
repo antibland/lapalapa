@@ -3,6 +3,7 @@
   @include transparent-white-bg;
   padding: 1em;
   margin-bottom: 1em;
+  clear: left;
 }
 
 .food-menu-list-item {
@@ -97,7 +98,7 @@
 }
 
 .more-info {
-  margin: 0 1em;
+  margin: 0 1em 1em;
 
   > p {
     font-size: 0.9em;

@@ -15,12 +15,13 @@ button,
 main {
   padding: 0 1em;
   margin: 0 auto;
-  flex: 1 0;
   opacity: 1;
   max-width: 100%;
+  width: calc(100% - 7em);
 
   @media #{$mobile-media} {
     padding: 1em;
+    width: auto;
   }
 }
 
