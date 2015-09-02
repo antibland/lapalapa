@@ -125,7 +125,7 @@ h6 {
 
 /* line 48, ../sass/_vertical_rhythm.scss */
 p {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   margin-bottom: 1.8rem;
   text-align: left;
 }
@@ -882,9 +882,8 @@ header, footer {
   max-width: 100%;
   width: 768px;
 }
-
-/* line 10, ../sass/_slideshow.scss */
-figure {
+/* line 9, ../sass/_slideshow.scss */
+.diy-slideshow figure {
   -moz-transition: opacity 1s;
   -o-transition: opacity 1s;
   -webkit-transition: opacity 1s;
@@ -892,12 +891,12 @@ figure {
   position: absolute;
   opacity: 0;
 }
-/* line 15, ../sass/_slideshow.scss */
-figure img {
+/* line 14, ../sass/_slideshow.scss */
+.diy-slideshow figure img {
   width: 100%;
 }
-/* line 19, ../sass/_slideshow.scss */
-figure.show {
+/* line 18, ../sass/_slideshow.scss */
+.diy-slideshow figure.show {
   -moz-transition: opacity 1s;
   -o-transition: opacity 1s;
   -webkit-transition: opacity 1s;
@@ -905,9 +904,8 @@ figure.show {
   opacity: 1;
   position: static;
 }
-
-/* line 26, ../sass/_slideshow.scss */
-figcaption {
+/* line 25, ../sass/_slideshow.scss */
+.diy-slideshow figcaption {
   position: absolute;
   font-family: sans-serif;
   font-size: .8em;
@@ -918,12 +916,12 @@ figcaption {
   background: rgba(0, 0, 0, 0.25);
   border-radius: 2px;
 }
-/* line 37, ../sass/_slideshow.scss */
-figcaption a {
+/* line 36, ../sass/_slideshow.scss */
+.diy-slideshow figcaption a {
   color: #fff;
 }
 
-/* line 42, ../sass/_slideshow.scss */
+/* line 43, ../sass/_slideshow.scss */
 .next, .prev {
   -moz-transition: opacity 0.5s;
   -o-transition: opacity 0.5s;
@@ -940,13 +938,13 @@ figcaption a {
   user-select: none;
 }
 
-/* line 55, ../sass/_slideshow.scss */
+/* line 56, ../sass/_slideshow.scss */
 .next:hover, .prev:hover {
   cursor: pointer;
   opacity: 1;
 }
 
-/* line 60, ../sass/_slideshow.scss */
+/* line 61, ../sass/_slideshow.scss */
 .next {
   right: 0;
   padding: 10px 5px 15px 10px;
@@ -954,7 +952,7 @@ figcaption a {
   border-bottom-left-radius: 3px;
 }
 
-/* line 67, ../sass/_slideshow.scss */
+/* line 68, ../sass/_slideshow.scss */
 .prev {
   left: 0;
   padding: 10px 10px 15px 5px;
