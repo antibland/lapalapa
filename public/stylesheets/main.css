@@ -878,7 +878,7 @@ header, footer {
   position: relative;
   display: block;
   overflow: hidden;
-  margin-bottom: 1em;
+  margin: 0 auto 1em;
   max-width: 100%;
   width: 768px;
 }
