@@ -1,12 +1,13 @@
 var express = require('express');
 var router = express.Router();
+var year = new Date().getFullYear();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', {
     section: 'index',
     title: 'La Palapa',
-    year: new Date().getFullYear()
+    year: year
   });
 });
 
@@ -14,7 +15,7 @@ router.get('/about', function(req, res, next) {
   res.render('about', {
     section: 'about',
     title: 'About Us',
-    year: new Date().getFullYear()
+    year: year
   });
 });
 
@@ -22,7 +23,7 @@ router.get('/trailer', function(req, res, next) {
   res.render('trailer', {
     section: 'trailer',
     title: 'The trailer',
-    year: new Date().getFullYear()
+    year: year
   });
 });
 
@@ -52,7 +53,7 @@ router.get('/menu', function(req, res, next) {
         title: 'Our Menu',
         images: scrubbed_names,
         menu_obj: docs,
-        year: new Date().getFullYear()
+        year: year
       });
 
     } else { throw err; }
@@ -68,7 +69,7 @@ router.get('/catering', function(req, res, next) {
         section: 'catering',
         title: 'Catering',
         menu_obj: docs,
-        year: new Date().getFullYear()
+        year: year
       });
 
     } else { throw err; }
@@ -79,7 +80,7 @@ router.get('/contact', function(req, res, next) {
   res.render('contact', {
     section: 'contact',
     title: 'Contact Us',
-    year: new Date().getFullYear()
+    year: year
   });
 });
 
