@@ -882,7 +882,14 @@ header, footer {
   max-width: 100%;
   width: 768px;
 }
-/* line 9, ../sass/_slideshow.scss */
+@media only screen and (max-width: 560px) {
+  /* line 1, ../sass/_slideshow.scss */
+  .diy-slideshow {
+    max-width: calc(100% + 2em);
+    left: -1em;
+  }
+}
+/* line 14, ../sass/_slideshow.scss */
 .diy-slideshow figure {
   -moz-transition: opacity 1s;
   -o-transition: opacity 1s;
@@ -891,11 +898,11 @@ header, footer {
   position: absolute;
   opacity: 0;
 }
-/* line 14, ../sass/_slideshow.scss */
+/* line 19, ../sass/_slideshow.scss */
 .diy-slideshow figure img {
   width: 100%;
 }
-/* line 18, ../sass/_slideshow.scss */
+/* line 23, ../sass/_slideshow.scss */
 .diy-slideshow figure.show {
   -moz-transition: opacity 1s;
   -o-transition: opacity 1s;
@@ -904,7 +911,7 @@ header, footer {
   opacity: 1;
   position: static;
 }
-/* line 25, ../sass/_slideshow.scss */
+/* line 30, ../sass/_slideshow.scss */
 .diy-slideshow figcaption {
   position: absolute;
   font-family: sans-serif;
@@ -916,12 +923,12 @@ header, footer {
   background: rgba(0, 0, 0, 0.25);
   border-radius: 2px;
 }
-/* line 36, ../sass/_slideshow.scss */
+/* line 41, ../sass/_slideshow.scss */
 .diy-slideshow figcaption a {
   color: #fff;
 }
 
-/* line 43, ../sass/_slideshow.scss */
+/* line 48, ../sass/_slideshow.scss */
 .next, .prev {
   -moz-transition: opacity 0.5s;
   -o-transition: opacity 0.5s;
@@ -938,13 +945,13 @@ header, footer {
   user-select: none;
 }
 
-/* line 56, ../sass/_slideshow.scss */
+/* line 61, ../sass/_slideshow.scss */
 .next:hover, .prev:hover {
   cursor: pointer;
   opacity: 1;
 }
 
-/* line 61, ../sass/_slideshow.scss */
+/* line 66, ../sass/_slideshow.scss */
 .next {
   right: 0;
   padding: 10px 5px 15px 10px;
@@ -952,7 +959,7 @@ header, footer {
   border-bottom-left-radius: 3px;
 }
 
-/* line 68, ../sass/_slideshow.scss */
+/* line 73, ../sass/_slideshow.scss */
 .prev {
   left: 0;
   padding: 10px 10px 15px 5px;

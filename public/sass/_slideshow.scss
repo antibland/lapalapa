@@ -6,6 +6,11 @@
   max-width: 100%;
   width: 768px;
 
+  @media #{$mobile-media} {
+    max-width: calc(100% + 2em);
+    left: -1em;
+  }
+
   figure {
     @include transition(1s opacity);
     position: absolute;
