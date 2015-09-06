@@ -587,7 +587,7 @@ main {
   margin: 0 auto;
   opacity: 1;
   max-width: 100%;
-  width: calc(100% - 7em);
+  width: calc(100% - 6.7em);
 }
 @media only screen and (max-width: 560px) {
   /* line 15, ../sass/_common.scss */
@@ -997,7 +997,7 @@ header, footer {
 nav {
   float: left;
   opacity: 1;
-  width: 7em;
+  width: 6.7em;
   height: 100%;
 }
 @media only screen and (max-width: 560px) {

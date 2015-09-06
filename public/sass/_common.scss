@@ -17,7 +17,7 @@ main {
   margin: 0 auto;
   opacity: 1;
   max-width: 100%;
-  width: calc(100% - 7em);
+  width: calc(100% - 6.7em);
 
   @media #{$mobile-media} {
     padding: 1em;
