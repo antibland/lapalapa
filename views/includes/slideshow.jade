@@ -1,4 +1,5 @@
-div.diy-slideshow(id='diy-slideshow')
+div.diy-slideshow(id='diy-slideshow', aria-describedby='slideshow-help')
+  p(id='slideshow-help') Click arrows or swipe to navigate
   .inner
     each image, index in images
       if index == 0
@@ -7,5 +8,5 @@ div.diy-slideshow(id='diy-slideshow')
       else
         figure
           img(src='/images/slideshow/#{image}' alt='')
-    span.prev &laquo;
-    span.next &raquo;
+    button.prev(tabindex='0') &laquo;
+    button.next(tabindex='0') &raquo;
