@@ -1,14 +1,16 @@
 .diy-slideshow {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  margin: 0 auto 1em;
-  max-width: 100%;
-  width: 768px;
 
-  @media #{$mobile-media} {
-    max-width: calc(100% + 2em);
-    left: -1em;
+  .inner {
+    width: 768px;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 0 auto 1em;
+    position: relative;
+
+    @media #{$mobile-media} {
+      max-width: calc(100% + 2em);
+      left: -1em;
+    }
   }
 
   figure {
