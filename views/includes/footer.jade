@@ -12,5 +12,12 @@ script.
 
     if (document.getElementsByClassName('diy-slideshow').length) {
       slideshow.init();
+      utilities.detectswipe('diy-slideshow', function(el, d) {
+        if (d === 'l') {
+          document.querySelector('.prev').click();
+        } else if (d === 'r') {
+          document.querySelector('.next').click();
+        }
+      });
     }
   };
