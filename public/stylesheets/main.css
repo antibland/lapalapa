@@ -1666,13 +1666,14 @@ header .hours-container .content dt, header .hours-container .content dd {
   vertical-align: top;
   display: inline-block;
   width: 100%;
+  margin-bottom: 1em;
 }
-/* line 100, ../sass/_custom_contact_styles.scss */
+/* line 101, ../sass/_custom_contact_styles.scss */
 .box.half {
   width: 50%;
 }
 @media only screen and (max-width: 768px) {
-  /* line 100, ../sass/_custom_contact_styles.scss */
+  /* line 101, ../sass/_custom_contact_styles.scss */
   .box.half {
     width: 100%;
     max-width: 100%;
@@ -1907,4 +1908,9 @@ form .button {
   box-shadow: 0 5px 4px -4px #333;
   border-radius: 0 0 0.5em 0.5em;
   width: 100%;
+}
+
+/* line 125, ../sass/_custom_styles.scss */
+iframe[id^='twitter'] {
+  max-height: 400px;
 }
