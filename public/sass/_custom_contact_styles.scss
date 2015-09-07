@@ -100,6 +100,17 @@
 
   &.half {
     width: 50%;
+
+    &:first-of-type {
+      .trailer & {
+        padding-right: 1em;
+
+        @media #{$tablet-media} {
+          padding-right: 0;
+        }
+      }
+    }
+
     @media #{$tablet-media} {
       width: 100%;
       max-width: 100%;

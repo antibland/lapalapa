@@ -1672,6 +1672,16 @@ header .hours-container .content dt, header .hours-container .content dd {
 .box.half {
   width: 50%;
 }
+/* line 105, ../sass/_custom_contact_styles.scss */
+.trailer .box.half:first-of-type {
+  padding-right: 1em;
+}
+@media only screen and (max-width: 768px) {
+  /* line 105, ../sass/_custom_contact_styles.scss */
+  .trailer .box.half:first-of-type {
+    padding-right: 0;
+  }
+}
 @media only screen and (max-width: 768px) {
   /* line 101, ../sass/_custom_contact_styles.scss */
   .box.half {
@@ -1908,9 +1918,4 @@ form .button {
   box-shadow: 0 5px 4px -4px #333;
   border-radius: 0 0 0.5em 0.5em;
   width: 100%;
-}
-
-/* line 125, ../sass/_custom_styles.scss */
-iframe[id^='twitter'] {
-  max-height: 400px;
 }
