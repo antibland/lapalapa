@@ -31,6 +31,16 @@ var slideshow = (function() {
            counter--;
            showCurrent();
         }, false);
+    },
+
+    enableSwipe: function() {
+      utilities.detectswipe('diy-slideshow-inner', function(el, d) {
+        if (d === 'l') {
+          document.querySelector('.prev').click();
+        } else if (d === 'r') {
+          document.querySelector('.next').click();
+        }
+      });
     }
   };
 
