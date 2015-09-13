@@ -83,9 +83,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-svgstore');
-  grunt.loadNpmTasks('grunt-contrib-jasmine');
   grunt.loadNpmTasks('grunt-browser-sync');
-  grunt.loadNpmTasks('grunt-tenon-client');
   grunt.loadNpmTasks('grunt-autoprefixer');
 
   grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'svgstore', 'autoprefixer', 'browserSync']);
