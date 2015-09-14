@@ -399,6 +399,7 @@
 
   var ret = {
     init: function() {
+      utilities.loadStyleSheet('/dist/main.min.css');
       bindings();
     },
     contact: function() {
