@@ -55,6 +55,36 @@ script.
       document.write('</span>');
     document.write('</li>')
 
+    document.write('<li class="food-menu-list-item">');
+    document.write('<h3>Favorites</h3>');
+    document.write('<dl>');
+    document.write('<dt>');
+      document.write('Tacos' +
+        '<span class="options">' +
+          '<span class="special" aria-label="Gluten-free option" title="Gluten-free option">GF</span>' +
+        '</span>' +
+        '<span class="food-menu-price">$3.25</span>');
+    document.write('</dt>');
+
+    document.write('<dd>Chicken, Chorizo, Ground Beef, Barbacoa, Rajas con papas, Mushrooms, Chipotle, BBQ pulled pork.</dd>');
+
+    document.write('<dt>');
+      document.write('Quesadillas' +
+        '<span class="food-menu-price">$3.50</span>');
+    document.write('</dt>');
+
+    document.write('<dd>Made with flour or corn tortilla, and served with a side of sour cream, pico de gallo and guacamole.</dd>');
+
+    document.write('<dt>');
+      document.write('Tortas' +
+        '<span class="food-menu-price">$9.50</span>');
+    document.write('</dt>');
+
+    document.write('<dd>Includes mayonnaise, beans, tomato, lettuce, onionm avocado, and served with a side of french fries.</dd>');
+
+    document.write('</dl>');
+    document.write('</li>');
+
     for (var i = 0; i < courses_len; i++) {
       document.write('<li class="food-menu-list-item">');
       document.write('<h3 id="' + menu_type + '_' + i + '">' +
