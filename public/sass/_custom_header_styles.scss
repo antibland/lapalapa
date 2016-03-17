@@ -89,7 +89,7 @@ header {
 
     li {
       float: left;
-      width: 50%;
+      width: 100%;
     }
 
     .content {
@@ -101,13 +101,9 @@ header {
       overflow: hidden;
       position: absolute;
       right: 0;
-      width: 550%;
+      width: 350%;
       z-index: 1;
       background: rgba(white, 0.95);
-
-      @media #{$mobile-media} {
-        width: 320px;
-      }
 
       ul {
         display: inline-block;
