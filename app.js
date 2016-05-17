@@ -7,8 +7,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cors = require('express-cors');
-
-var mongoose = require('mongoose');
 var nodemailer = require('nodemailer');
 
 var routes = require('./routes/index');
@@ -17,22 +15,6 @@ var app = express();
 var _session;
 
 app.use(compression());
-
-module.exports = {
- config: {
-   db: {
-     production: process.env.PROD_DB,
-     development: "mongodb://localhost/test",
-     test: "mongodb://localhost/test"
-   }
- }
-};
-
-if (app.get('env') === 'development' || app.get('env') === 'test') {
-  mongoose.connect(module.exports.config.db.development);
-} else {
-  mongoose.connect(module.exports.config.db.production);
-}
 
 var allowedUsernames = ['antibland', 'jesusmtzpa'];
 

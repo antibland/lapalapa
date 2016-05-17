@@ -28,8 +28,7 @@ router.get('/trailer', function(req, res, next) {
 });
 
 router.get('/menu', function(req, res, next) {
-  var Menu = require('../models/menus/menu'),
-      fs            = require('fs'),
+  var fs            = require('fs'),
       file_names    = fs.readdirSync('./public/images/slideshow'),
       len           = file_names.length,
       scrubbed_names = [],
@@ -45,34 +44,19 @@ router.get('/menu', function(req, res, next) {
     }
   }
 
-  Menu.find({ type: 'southside' }, function(err, docs) {
-    if (!err) {
-
-      res.render('menu', {
-        section: 'menu',
-        title: 'Our Menu',
-        images: scrubbed_names,
-        menu_obj: docs,
-        year: year
-      });
-
-    } else { throw err; }
+  res.render('menu', {
+    section: 'menu',
+    title: 'Our Menu',
+    images: scrubbed_names,
+    year: year
   });
 });
 
 router.get('/catering', function(req, res, next) {
-  var Menu = require('../models/menus/menu');
-
-  Menu.find({ type: 'catering' }, function(err, docs) {
-    if (!err) {
-      res.render('catering', {
-        section: 'catering',
-        title: 'Catering',
-        menu_obj: docs,
-        year: year
-      });
-
-    } else { throw err; }
+  res.render('catering', {
+    section: 'catering',
+    title: 'Catering',
+    year: year
   });
 });
 

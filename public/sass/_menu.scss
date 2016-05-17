@@ -60,6 +60,10 @@
     margin-bottom: 2em;
   }
 
+  h3 + p {
+    font-style: italic;
+  }
+
   .options > span {
     font-weight: bold;
     margin-left: 1em;
