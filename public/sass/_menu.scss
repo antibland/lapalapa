@@ -12,6 +12,7 @@
   padding: 1em;
   vertical-align: top;
 
+
   &.legend {
     width: 100%;
     text-align: right;
@@ -89,6 +90,21 @@
       top: 1px;
       margin-left: 0;
       font-weight: normal;
+    }
+  }
+}
+
+.horizontal-list {
+  padding-left: 20px;
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    list-style-type: circle;
+    margin-right: 40px;
+
+    &:last-child {
+      margin-right: 0;
     }
   }
 }
