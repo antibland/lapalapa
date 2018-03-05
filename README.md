@@ -1,8 +1,7 @@
-/*
-  compass watch
-  grunt watch
-  nodemon
+## Run it
+  * compass watch
+  * grunt watch
+  * nodemon
 
-  git push origin (heroku)
-  git push github (duh)
-*/
+  * git push origin (heroku)
+  * git push github (duh)
