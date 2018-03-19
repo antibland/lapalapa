@@ -3,9 +3,6 @@ header
     a(href='/', class='logo') La Palapa
   p.phone &mdash; 412-586-7015 &mdash;
 
-  if section == 'contact'
-    include ../includes/make_reservation.jade
-
   unless section == 'admin'
     div.hours-container
       a(id='hours', class='toggle-hours' href='#hours', aria-label='Show hours') hours
