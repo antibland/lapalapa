@@ -5,11 +5,54 @@ block content
   include ./includes/slideshow
   div.more-info
     p.icon-farm Our beef is locally sourced from <a href='http://www.clarionfarms.com'>Clarion Farms</a>.
-  h3(class='menus-nav-header') Menu types
+  h3(class='menus-nav-header' id='top-menu') Menu types
   nav(class='menus-nav')
-    a(href='#menu-main') Main
-    a(href='#menu-brunch') Brunch
-    a(href='#menu-drinks') Drinks
+    a(href='#menu-main' class='nav-button') Main
+    a(href='#menu-drinks' class='nav-button') Drinks
+    a(href='#menu-brunch' class='nav-button') Brunch
+
   include ./includes/menus/south_side_static
+  include ./includes/menus/back_to_top
   include ./includes/menus/drinks_static
+  include ./includes/menus/back_to_top
   include ./includes/menus/brunch_static
+  include ./includes/menus/back_to_top
+
+
+  script.
+    function scrollTo(element, to, duration) {
+      if (duration <= 0) return;
+      var difference = to - element.scrollTop;
+      var perTick = difference / duration * 10;
+
+      setTimeout(function() {
+        element.scrollTop = element.scrollTop + perTick;
+        if (element.scrollTop === to) return;
+        scrollTo(element, to, duration - 10);
+      }, 10);
+    }
+
+    var navButtons = document.querySelectorAll('.nav-button');
+    navButtons.forEach(function(button) {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        scrollTo(
+          document.documentElement,
+          document.getElementById(button.hash.substr(1)).offsetTop,
+          400
+        );
+      });
+    });
+
+    var backToTop = document.querySelectorAll('.back-to-top > a');
+    backToTop.forEach(function(button) {
+
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        scrollTo(
+          document.documentElement,
+          document.getElementById('top-menu').offsetTop,
+          400
+        );
+      });
+    });
