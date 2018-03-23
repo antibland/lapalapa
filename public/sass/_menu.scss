@@ -1,3 +1,35 @@
+.menus-nav-header {
+  text-align: center;
+  padding-bottom: 0.5em;
+  font-weight: bold;
+}
+
+.menus-sub-header {
+  text-align: center;
+  padding-right: 0 !important;
+}
+
+.menus-nav {
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding-bottom: 1em;
+
+  > a {
+    flex: 1;
+    text-align: center;
+    border-top: 1px dashed #1b633a;
+    transition: 0.3s background-color, 0.3s color;
+
+    &:hover,
+    &:focus,
+    &.active {
+      background-color: #1b633a;
+      color: white;
+    }
+  }
+}
+
 .food-menu {
   @include rounded-bottom-shadow;
   @include transparent-white-bg;
@@ -11,6 +43,10 @@
   display: inline-block;
   padding: 1em;
   vertical-align: top;
+
+  &.full-width {
+    width: 100%;
+  }
 
   &.legend {
     width: 100%;
