@@ -3,5 +3,5 @@
   * grunt watch
   * nodemon
 
+  * git push github
   * git push origin (heroku)
-  * git push github (duh)
