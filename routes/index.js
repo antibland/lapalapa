@@ -1,6 +1,11 @@
 var express = require('express');
 var router = express.Router();
 var year = new Date().getFullYear();
+var env = process.env.NODE_ENV || "development";
+
+if (env === "development") {
+  require("dotenv").config();
+}
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
